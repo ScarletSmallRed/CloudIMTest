@@ -36,3 +36,18 @@
 * Parse.com
 * LeanCloud
 * RongCloud
+
+## 2.2 Create Project and Install Cocoapods
+
+### Some Basic Cocoapods Commands:
+
+```shell
+//Update Gem:
+	sudo gem update --system
+//Switch Cocoapods date source:
+	gem sources --remove https://rubygems.org/
+	gem sources -a http://ruby.taobao.org/
+	gem sources -l
+//Install Cocoapods
+```
+
