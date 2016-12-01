@@ -1,8 +1,6 @@
-# Log
+# 1 Git in Xcode
 
-## 1 Git in Xcode
-
-### 1.1 Basic Operation
+## 1.1 Basic Operation
 
 * Creating a Git repository
 
