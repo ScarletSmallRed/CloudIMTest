@@ -48,6 +48,15 @@
 	gem sources --remove https://rubygems.org/
 	gem sources -a http://ruby.taobao.org/
 	gem sources -l
-//Install Cocoapods
+//Install Cocoapods:
+	sudo gem install cocoapods
+//Set pod repo:
+	pod setup
+//Test:
+//If there is a version number, then it is already installed successfully.
+	pod
+//Install third-party framework:
+	pod install --no-repo-update
+	pod update --no-repo-update
 ```
 
