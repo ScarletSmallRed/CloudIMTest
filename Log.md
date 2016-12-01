@@ -15,9 +15,6 @@
 * Discarding Changes
 
 
-<<<<<<< HEAD
-
-=======
 # 2 Bridge and CocoaPods Configuration
 
 ### Object
@@ -87,4 +84,3 @@ Then, run the following command:
 ```shell
 $ pod install
 ```
->>>>>>> dev
