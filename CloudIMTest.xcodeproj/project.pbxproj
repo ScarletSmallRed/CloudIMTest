@@ -13,6 +13,7 @@
 		CABFA3D81DF0155100AA0D4C /* CloudIMTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CABFA3D61DF0155100AA0D4C /* CloudIMTest.xcdatamodeld */; };
 		CABFA3DA1DF0155100AA0D4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CABFA3D91DF0155100AA0D4C /* Assets.xcassets */; };
 		CABFA3DD1DF0155100AA0D4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CABFA3DB1DF0155100AA0D4C /* LaunchScreen.storyboard */; };
+		CAD1AF421DF0562100D08C44 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = CAD1AF411DF0562100D08C44 /* Podfile */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		CABFA3D91DF0155100AA0D4C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CABFA3DC1DF0155100AA0D4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CABFA3DE1DF0155100AA0D4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CAD1AF411DF0562100D08C44 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +42,7 @@
 		CABFA3C31DF0155100AA0D4C = {
 			isa = PBXGroup;
 			children = (
+				CAD1AF411DF0562100D08C44 /* Podfile */,
 				CABFA3CE1DF0155100AA0D4C /* CloudIMTest */,
 				CABFA3CD1DF0155100AA0D4C /* Products */,
 			);
@@ -129,6 +132,7 @@
 			files = (
 				CABFA3DD1DF0155100AA0D4C /* LaunchScreen.storyboard in Resources */,
 				CABFA3DA1DF0155100AA0D4C /* Assets.xcassets in Resources */,
+				CAD1AF421DF0562100D08C44 /* Podfile in Resources */,
 				CABFA3D51DF0155100AA0D4C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -306,6 +310,7 @@
 				CABFA3E31DF0155100AA0D4C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
