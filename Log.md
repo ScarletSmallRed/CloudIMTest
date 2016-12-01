@@ -14,5 +14,25 @@
 
 * Discarding Changes
 
-  ​
 
+
+# 2 Bridge and Cocoapods Configuration
+
+### Object:
+
+* Fast Integrate chat UI component and service framework.
+* Use Cocoapods to configure third-party components.
+* Use the bridge-header files to use Object-C code seamlessly.
+
+## 2.1 IM Framwork Introduction
+
+### RongCloudIMKit:
+
+* Integrate a complete group of chat UI.
+* UI system and User system in the application are seperated.
+
+### Some IM Cloud Examples:
+
+* Parse.com
+* LeanCloud
+* RongCloud
