@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         // Query saved token
-        let tokenCache = UserDefaults.standard.object(forKey: "kDeviceToken") as? String
+//        let tokenCache = UserDefaults.standard.object(forKey: "kDeviceToken") as? String
         
         // Initialize Appkey
         RCIM.shared().initWithAppKey("8brlm7uf8p1h3")
