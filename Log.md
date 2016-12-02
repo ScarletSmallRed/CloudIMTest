@@ -87,10 +87,49 @@ $ pod install
 
 ## Bridging Header File
 
-Create file `CloudIMTest-Bridging-Header` in the project , and specify it in the file:
+Create file `CloudIMTest-Bridging-Header.h` in the project , and specify it in the file:
 
 ```objective-c
 #import <RongIMKit/RongIMKit.h>
 ```
 
 And then **Clean** and **Build** the project.
+
+# 2.4 Connection Test
+
+### Register Application
+
+* Registration
+* My application
+* Create application
+* Get Appkey and secrete
+* API Test: Acquisition and testing of token
+
+### Initialization Code
+
+Query saved token:
+
+```Swift
+let tokenCache = UserDefaults.standard.object(forKey: "kDeviceToken") as? String
+```
+
+Initialize AppKey:
+
+```Swift
+RCIM.shared().initWithAppKey("8brlm7uf8p1h3")
+```
+
+Test connection with token:
+
+```Swift
+RCIM.shared().connect(withToken: "GWEUq7mJS8YeGALAd6cYa6PTsgTvHokSj1tjqTLHhWKR8R0k4ma8wNMFlFVjNU0ziNHmbRxOyqwr3AtoeblvsmQnIdGdPBcA", success: {
+            (_) in
+                print(NSLocalizedString("Connect successfully", comment: "successfull connection notice"))
+        }, error: {
+            (_) in
+                print(NSLocalizedString("Connection failed", comment: "unsuccessful connection warning"))
+        }, tokenIncorrect: {
+            print(NSLocalizedString("Token is incorrect or invalid", comment: "Incorrect token notice"))
+        })
+```
+

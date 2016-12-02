@@ -17,6 +17,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // Query saved token
+        let tokenCache = UserDefaults.standard.object(forKey: "kDeviceToken") as? String
+        
+        // Initialize Appkey
+        RCIM.shared().initWithAppKey("8brlm7uf8p1h3")
+        
+        // Test connection with token
+        RCIM.shared().connect(withToken: "GWEUq7mJS8YeGALAd6cYa6PTsgTvHokSj1tjqTLHhWKR8R0k4ma8wNMFlFVjNU0ziNHmbRxOyqwr3AtoeblvsmQnIdGdPBcA", success: {
+            (_) in
+                print(NSLocalizedString("Connect successfully", comment: "successfull connection notice"))
+        }, error: {
+            (_) in
+                print(NSLocalizedString("Connection failed", comment: "unsuccessful connection warning"))
+        }, tokenIncorrect: {
+            print(NSLocalizedString("Token is incorrect or invalid", comment: "Incorrect token notice"))
+        })
+        
         return true
     }
 
