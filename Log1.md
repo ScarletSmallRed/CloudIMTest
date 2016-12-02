@@ -1,5 +1,4 @@
-* auto-gen TOC:
-{:toc}
+[TOC]
 
 # 1 Git in Xcode
 
