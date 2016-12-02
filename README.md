@@ -9,5 +9,9 @@ Use Swift to create a full-featured chat APP basing on:
 
 # Log
 
-* [Log1](./Log1.md)
+More detail is  showed by links below:
+
+* [Log1(Bridge and CocoaPods Configuration)](Log1.md)
+* [Log2(Chat and Conversation, CocoaPods and Storyboard)](Log2.md)
+
 
