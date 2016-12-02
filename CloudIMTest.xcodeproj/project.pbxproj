@@ -20,6 +20,7 @@
 /* Begin PBXFileReference section */
 		42AB6D57BD6942058F2D6A04 /* Pods-CloudIMTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CloudIMTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CloudIMTest/Pods-CloudIMTest.debug.xcconfig"; sourceTree = "<group>"; };
 		62C186AD97C850BB5EDC3F6F /* Pods-CloudIMTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CloudIMTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-CloudIMTest/Pods-CloudIMTest.release.xcconfig"; sourceTree = "<group>"; };
+		CA930BB11DF1088700EBA1E0 /* CloudIMTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CloudIMTest-Bridging-Header.h"; sourceTree = "<group>"; };
 		CABFA3CC1DF0155100AA0D4C /* CloudIMTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloudIMTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CABFA3CF1DF0155100AA0D4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CABFA3D11DF0155100AA0D4C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +74,7 @@
 				CABFA3DB1DF0155100AA0D4C /* LaunchScreen.storyboard */,
 				CABFA3DE1DF0155100AA0D4C /* Info.plist */,
 				CABFA3D61DF0155100AA0D4C /* CloudIMTest.xcdatamodeld */,
+				CA930BB11DF1088700EBA1E0 /* CloudIMTest-Bridging-Header.h */,
 			);
 			path = CloudIMTest;
 			sourceTree = "<group>";
@@ -130,6 +132,7 @@
 					CABFA3CB1DF0155100AA0D4C = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = 7K8UV4ZDS9;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -345,11 +348,14 @@
 			baseConfigurationReference = 42AB6D57BD6942058F2D6A04 /* Pods-CloudIMTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 7K8UV4ZDS9;
 				INFOPLIST_FILE = CloudIMTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.shenshaohong.CloudIMTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CloudIMTest/CloudIMTest-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -359,11 +365,13 @@
 			baseConfigurationReference = 62C186AD97C850BB5EDC3F6F /* Pods-CloudIMTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 7K8UV4ZDS9;
 				INFOPLIST_FILE = CloudIMTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.shenshaohong.CloudIMTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CloudIMTest/CloudIMTest-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
