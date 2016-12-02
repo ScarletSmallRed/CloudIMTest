@@ -84,3 +84,13 @@ Then, run the following command:
 ```shell
 $ pod install
 ```
+
+## Bridging Header File
+
+Create file `CloudIMTest-Bridging-Header` in the project , and specify it in the file:
+
+```objective-c
+#import <RongIMKit/RongIMKit.h>
+```
+
+And then **Clean** and **Build** the project.
