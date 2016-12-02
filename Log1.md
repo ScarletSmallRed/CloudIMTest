@@ -1,3 +1,5 @@
+[TOC]
+
 # 1 Git in Xcode
 
 ## 1.1 Basic Operation
