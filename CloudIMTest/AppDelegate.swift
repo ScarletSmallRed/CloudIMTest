@@ -25,9 +25,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         RCIM.shared().initWithAppKey("8brlm7uf8p1h3")
         
         // Test connection with token
-        RCIM.shared().connect(withToken: "GWEUq7mJS8YeGALAd6cYa6PTsgTvHokSj1tjqTLHhWKR8R0k4ma8wNMFlFVjNU0ziNHmbRxOyqwr3AtoeblvsmQnIdGdPBcA", success: {
+        RCIM.shared().connect(withToken: "wBiBRkCcFkOcOAMX9c5GDvz3SM5kSP2mMdR4FsTUKC4j8KwDF9iSeWiGXn0Df+5QxCBNPZdVGkk8JmMuLwXv39lghMZgSP65", success: {
             (_) in
                 print(NSLocalizedString("Connect successfully", comment: "successfull connection notice"))
+            
+                let currentUser = RCUserInfo(userId: "xiaobo2", name: "xiaoboClone", portrait: "http://www.xiaoboswift.com/1.jpg")
+                RCIMClient.shared().currentUserInfo = currentUser
         }, error: {
             (_) in
                 print(NSLocalizedString("Connection failed", comment: "unsuccessful connection warning"))
