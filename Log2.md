@@ -25,7 +25,6 @@
 * targetId
 * userName
 * conversation Type
-* navigation bar title
 
 ## 3.2 Achievement of Private Chatting
 
@@ -66,3 +65,4 @@ Build and run the current scheme:
 
 ![屏幕快照 2016-12-03 上午9.18.42](PicsForLog/屏幕快照 2016-12-03 上午9.18.42.png)
 
+* navigation bar title
