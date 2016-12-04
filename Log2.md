@@ -65,3 +65,56 @@ class conversationViewController: RCConversationViewController {
 Build and run the current scheme:
 
 ![屏幕快照 2016-12-03 上午9.18.42](PicsForLog/屏幕快照 2016-12-03 上午9.18.42.png)
+
+## 3.3 Set Up Private Chatting People and Test
+
+### Initialize SDK
+
+Need to add a SDK reference to project's Bridging-Header.h file.
+
+```swift
+#import <RongIMKit/RongIMKit.h>
+```
+
+Pass App Key,  getted in `RongCloud Development Center`, into function `initWithAppKey` to initialize SDK.
+
+```swift
+RCIM.sharedRCIM().initWithAppKey("YourTestAppKey")
+```
+
+### Connect Server
+
+Through the RCIM of a single case, introduce the Token getted in the last step into function `RCIM.shared().connect(withToken: String!, success: ((String?) -> Void)!, error: ((RCConnectErrorCode) -> Void)!, tokenIncorrect: (() -> Void)!)`,  and then you can establish a connection with the server.
+
+```swift
+RCIM.sharedRCIM().connectWithToken("YourTestUserToken",
+success: { (userId) -> Void in
+    print("Successfully, ID：\(userId)")
+}, error: { (status) -> Void in
+    print("Wrong code:\(status.rawValue)")
+}, tokenIncorrect: {
+    print("Incorrect token.")
+})
+```
+
+### Start The Chatting Interface
+
+Create a class `ConversationViewController` ，subclass of  `RCConversationViewController` and set property such as `conversationType`, `targetId` and `title` to get start:
+
+```swift
+self.targetId = "tester002"
+self.title = "tester002"
+self.conversationType = .ConversationType_PRIVATE
+```
+
+### Test The Conversation
+
+In `My Application`, you can use `API Debug` —> `Send Private Chatting Message` to test the application:
+
+![屏幕快照 2016-12-04 上午11.04.11](PicsForLog/屏幕快照 2016-12-04 上午11.04.11.png)
+
+![屏幕快照 2016-12-04 上午11.04.28](PicsForLog/屏幕快照 2016-12-04 上午11.04.28.png)
+
+
+
+
