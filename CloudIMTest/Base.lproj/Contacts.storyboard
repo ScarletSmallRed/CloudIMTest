@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="83L-3d-Le2">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Contacts-->
+        <scene sceneID="gP0-sT-h7O">
+            <objects>
+                <viewController id="6MJ-kd-GtX" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cai-Mz-f3J"/>
+                        <viewControllerLayoutGuide type="bottom" id="sBl-m5-AZV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4rs-16-XOS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Contacts" id="s2N-qy-EaU"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ryV-jU-gUZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-200.80000000000001" y="1161.7691154422789"/>
+        </scene>
+        <!--Contacts-->
+        <scene sceneID="IdJ-I2-YDV">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="83L-3d-Le2" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Contacts" image="contact" id="5p1-57-Aqe"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4_7.fullscreen"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WSB-PH-YtF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="6MJ-kd-GtX" kind="relationship" relationship="rootViewController" id="amG-fm-zcK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ODx-ao-1Rm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1140" y="1161.7691154422789"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="contact" width="62" height="42"/>
+    </resources>
+</document>

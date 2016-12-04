@@ -115,6 +115,32 @@ In `My Application`, you can use `API Debug` —> `Send Private Chatting Message
 
 ![屏幕快照 2016-12-04 上午11.04.28](PicsForLog/屏幕快照 2016-12-04 上午11.04.28.png)
 
+## 3.4 Imporvement of Storyboard
 
+### Tar Bar Controller
 
+Overall
+
+![屏幕快照 2016-12-04 下午3.49.15](PicsForLog/屏幕快照 2016-12-04 下午3.49.15.png)
+
+### Refactor to Storyboard
+
+![屏幕快照 2016-12-04 下午3.48.38](PicsForLog/屏幕快照 2016-12-04 下午3.48.38.png)
+
+### Navigation Font Style
+
+The Swift code is showed in Class `AppDelegate` 's function `func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool` as below:
+
+```swift
+UINavigationBar.appearance().barTintColor = UIColor(red: 0 / 255, green: 0 / 255, blue: 0 / 255, alpha: 1)
+        UINavigationBar.appearance().tintColor = UIColor.white
+        
+        UIApplication.shared.statusBarStyle = .lightContent
+        
+        if let barFont = UIFont(name: "Helvetica Neue", size: 20.0) {
+            UINavigationBar.appearance().titleTextAttributes = [
+                NSForegroundColorAttributeName: UIColor.white,
+                           NSFontAttributeName: barFont]
+        }
+```
 

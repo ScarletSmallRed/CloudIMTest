@@ -38,6 +38,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         
+        UINavigationBar.appearance().barTintColor = UIColor(red: 0 / 255, green: 0 / 255, blue: 0 / 255, alpha: 1)
+        UINavigationBar.appearance().tintColor = UIColor.white
+        
+        UIApplication.shared.statusBarStyle = .lightContent
+        
+        if let barFont = UIFont(name: "Helvetica Neue", size: 20.0) {
+            UINavigationBar.appearance().titleTextAttributes = [
+                NSForegroundColorAttributeName: UIColor.white,
+                           NSFontAttributeName: barFont]
+        }
+        
+        
+        
         return true
     }
 
