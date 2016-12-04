@@ -36,6 +36,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print(NSLocalizedString("Token is incorrect or invalid", comment: "Incorrect token notice"))
         })
         
+        
+        
         return true
     }
 

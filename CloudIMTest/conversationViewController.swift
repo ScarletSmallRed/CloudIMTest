@@ -13,9 +13,9 @@ class conversationViewController: RCConversationViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.targetId = "tester001"
+        self.targetId = "tester002"
         print(RCIMClient.shared().currentUserInfo?.userId)
-        self.title = "tester001"
+        self.title = "tester002"
 //        self.userName = "ssh1374"
         self.conversationType = .ConversationType_PRIVATE
         // Do any additional setup after loading the view.
