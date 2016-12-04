@@ -144,3 +144,43 @@ UINavigationBar.appearance().barTintColor = UIColor(red: 0 / 255, green: 0 / 255
         }
 ```
 
+## 3.5 Set The Provider of User Information
+
+* Class `AppDelegate` should inherit class `RCIMUserInfoDataSource`:
+
+```swift
+class AppDelegate: UIResponder, UIApplicationDelegate, RCIMUserInfoDataSource
+```
+
+* And then implement the function `getUserInfo(withUserId userId: String!, completion: ((RCUserInfo?) -> Void)!)` by self:
+
+```swift
+// MARK: - RCIM User Info
+    
+    func getUserInfo(withUserId userId: String!, completion: ((RCUserInfo?) -> Void)!) {
+        
+        let userInfo = RCUserInfo()
+        userInfo.userId = userId
+        
+        
+        switch userId {
+        case "tester001":
+            userInfo.name = "tester1"
+            userInfo.portraitUri = "https://ss0.baidu.com/73t1bjeh1BF3odCf/it/u=1756054607,4047938258&fm=96&s=94D712D20AA1875519EB37BE0300C008"
+        case "tester002":
+            userInfo.name = "tester2"
+            userInfo.portraitUri = "http://v1.qzone.cc/avatar/201407/27/09/23/53d45474e1312012.jpg!200x200.jpg"
+        default:
+            print(NSLocalizedString("User doesn't exist.", comment: "No user"))
+        }
+        
+        completion(userInfo)
+    }
+```
+
+* Set class `AppDelegate` as the `RCIM` data source in function `application( _:didFinishLaunchingWithOptions)  `:
+
+```swift
+RCIM.shared().userInfoDataSource = self
+```
+
