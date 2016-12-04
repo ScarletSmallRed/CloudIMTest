@@ -129,7 +129,7 @@ Overall
 
 ### Navigation Font Style
 
-The Swift code is showed in Class `AppDelegate` 's function `func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool` as below:
+The Swift code is showed in Class `AppDelegate` 's function ` application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool` as below:
 
 ```swift
 UINavigationBar.appearance().barTintColor = UIColor(red: 0 / 255, green: 0 / 255, blue: 0 / 255, alpha: 1)
