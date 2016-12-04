@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, RCIMUserInfoDataSource {
 
     var window: UIWindow?
 
@@ -49,6 +49,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                            NSFontAttributeName: barFont]
         }
         
+        RCIM.shared().userInfoDataSource = self
         
         
         return true
@@ -121,6 +122,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }
         }
+    }
+    
+    // MARK: - RCIM User Info
+    
+    func getUserInfo(withUserId userId: String!, completion: ((RCUserInfo?) -> Void)!) {
+        
+        let userInfo = RCUserInfo()
+        userInfo.userId = userId
+        
+        
+        switch userId {
+        case "tester001":
+            userInfo.name = "tester1"
+            userInfo.portraitUri = "https://ss0.baidu.com/73t1bjeh1BF3odCf/it/u=1756054607,4047938258&fm=96&s=94D712D20AA1875519EB37BE0300C008"
+        case "tester002":
+            userInfo.name = "tester2"
+            userInfo.portraitUri = "http://v1.qzone.cc/avatar/201407/27/09/23/53d45474e1312012.jpg!200x200.jpg"
+        default:
+            print(NSLocalizedString("User doesn't exist.", comment: "No user"))
+        }
+        
+        completion(userInfo)
     }
 
 }
