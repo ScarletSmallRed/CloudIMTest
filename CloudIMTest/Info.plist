@@ -50,5 +50,7 @@
 	<string>YES</string>
 	<key>NSCameraUsageDescription</key>
 	<string>YES</string>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
 </dict>
 </plist>

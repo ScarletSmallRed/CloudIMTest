@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		6D836C2E4AFE5538231F6CDE /* libPods-CloudIMTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D57C469C5370C72249ABE471 /* libPods-CloudIMTest.a */; };
 		CA40C4111DF250930027AD18 /* conversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA40C4101DF250930027AD18 /* conversationViewController.swift */; };
+		CA7A1E431DF3F65E002145BE /* ConversationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7A1E421DF3F65E002145BE /* ConversationListViewController.swift */; };
+		CA7A1E461DF3FFBB002145BE /* Conversations.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA7A1E441DF3FFBB002145BE /* Conversations.storyboard */; };
+		CA7A1E481DF3FFCD002145BE /* Serve.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA7A1E471DF3FFCD002145BE /* Serve.storyboard */; };
+		CA7A1E4B1DF400CD002145BE /* Contacts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA7A1E491DF400CD002145BE /* Contacts.storyboard */; };
+		CA7A1E4D1DF400DA002145BE /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA7A1E4C1DF400DA002145BE /* About.storyboard */; };
 		CABFA3D01DF0155100AA0D4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABFA3CF1DF0155100AA0D4C /* AppDelegate.swift */; };
 		CABFA3D51DF0155100AA0D4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CABFA3D31DF0155100AA0D4C /* Main.storyboard */; };
 		CABFA3D81DF0155100AA0D4C /* CloudIMTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CABFA3D61DF0155100AA0D4C /* CloudIMTest.xcdatamodeld */; };
@@ -21,6 +26,11 @@
 		42AB6D57BD6942058F2D6A04 /* Pods-CloudIMTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CloudIMTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CloudIMTest/Pods-CloudIMTest.debug.xcconfig"; sourceTree = "<group>"; };
 		62C186AD97C850BB5EDC3F6F /* Pods-CloudIMTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CloudIMTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-CloudIMTest/Pods-CloudIMTest.release.xcconfig"; sourceTree = "<group>"; };
 		CA40C4101DF250930027AD18 /* conversationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = conversationViewController.swift; sourceTree = "<group>"; };
+		CA7A1E421DF3F65E002145BE /* ConversationListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationListViewController.swift; sourceTree = "<group>"; };
+		CA7A1E451DF3FFBB002145BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Conversations.storyboard; sourceTree = "<group>"; };
+		CA7A1E471DF3FFCD002145BE /* Serve.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Serve.storyboard; sourceTree = "<group>"; };
+		CA7A1E4A1DF400CD002145BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Contacts.storyboard; sourceTree = "<group>"; };
+		CA7A1E4C1DF400DA002145BE /* About.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = About.storyboard; sourceTree = "<group>"; };
 		CA930BB11DF1088700EBA1E0 /* CloudIMTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CloudIMTest-Bridging-Header.h"; sourceTree = "<group>"; };
 		CABFA3CC1DF0155100AA0D4C /* CloudIMTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloudIMTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CABFA3CF1DF0155100AA0D4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +79,11 @@
 			children = (
 				CABFA3CF1DF0155100AA0D4C /* AppDelegate.swift */,
 				CABFA3D31DF0155100AA0D4C /* Main.storyboard */,
+				CA7A1E4C1DF400DA002145BE /* About.storyboard */,
+				CA7A1E491DF400CD002145BE /* Contacts.storyboard */,
+				CA7A1E471DF3FFCD002145BE /* Serve.storyboard */,
+				CA7A1E441DF3FFBB002145BE /* Conversations.storyboard */,
+				CA7A1E421DF3F65E002145BE /* ConversationListViewController.swift */,
 				CA40C4101DF250930027AD18 /* conversationViewController.swift */,
 				CABFA3D91DF0155100AA0D4C /* Assets.xcassets */,
 				CABFA3DB1DF0155100AA0D4C /* LaunchScreen.storyboard */,
@@ -162,7 +177,11 @@
 			files = (
 				CABFA3DD1DF0155100AA0D4C /* LaunchScreen.storyboard in Resources */,
 				CABFA3DA1DF0155100AA0D4C /* Assets.xcassets in Resources */,
+				CA7A1E4D1DF400DA002145BE /* About.storyboard in Resources */,
+				CA7A1E461DF3FFBB002145BE /* Conversations.storyboard in Resources */,
+				CA7A1E481DF3FFCD002145BE /* Serve.storyboard in Resources */,
 				CAD1AF421DF0562100D08C44 /* Podfile in Resources */,
+				CA7A1E4B1DF400CD002145BE /* Contacts.storyboard in Resources */,
 				CABFA3D51DF0155100AA0D4C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -223,6 +242,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CABFA3D81DF0155100AA0D4C /* CloudIMTest.xcdatamodeld in Sources */,
+				CA7A1E431DF3F65E002145BE /* ConversationListViewController.swift in Sources */,
 				CA40C4111DF250930027AD18 /* conversationViewController.swift in Sources */,
 				CABFA3D01DF0155100AA0D4C /* AppDelegate.swift in Sources */,
 			);
@@ -231,6 +251,22 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		CA7A1E441DF3FFBB002145BE /* Conversations.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CA7A1E451DF3FFBB002145BE /* Base */,
+			);
+			name = Conversations.storyboard;
+			sourceTree = "<group>";
+		};
+		CA7A1E491DF400CD002145BE /* Contacts.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CA7A1E4A1DF400CD002145BE /* Base */,
+			);
+			name = Contacts.storyboard;
+			sourceTree = "<group>";
+		};
 		CABFA3D31DF0155100AA0D4C /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

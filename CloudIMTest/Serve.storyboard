@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="41b-pm-L7Y">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Serve-->
+        <scene sceneID="c0D-qh-SpG">
+            <objects>
+                <viewController id="lfs-fd-9a9" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lxF-M9-26u"/>
+                        <viewControllerLayoutGuide type="bottom" id="X3w-p8-k7w"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="49b-Im-qlF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Serve" id="xza-GX-NqZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fU9-5g-xH3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1140" y="506.89655172413796"/>
+        </scene>
+        <!--Serve-->
+        <scene sceneID="Wp7-5f-MGc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="41b-pm-L7Y" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Serve" image="serve" id="PzZ-8Z-lA1"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4_7.fullscreen"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DQ2-NY-8Aq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="lfs-fd-9a9" kind="relationship" relationship="rootViewController" id="h5X-8t-9FW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0a8-dM-At0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2079.1999999999998" y="506.89655172413796"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="serve" width="46" height="44"/>
+    </resources>
+</document>
