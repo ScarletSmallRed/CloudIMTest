@@ -32,6 +32,8 @@ class ConversationListViewController: RCConversationListViewController {
                 
                 ])
             
+            self.title = NSLocalizedString("Connected", comment: "Conversation connected title")
+            
             self.refreshConversationTableViewIfNeeded()
         }
 
