@@ -184,3 +184,48 @@ class AppDelegate: UIResponder, UIApplicationDelegate, RCIMUserInfoDataSource
 RCIM.shared().userInfoDataSource = self
 ```
 
+## 3.6 Display Conversation List Content-Asynchronous Connection
+
+### Modification in AppDelegate
+
+Add a new function `connectServer(_:)` some of whose statements are extracted from function `application(_: didFinishLaunchingWithOptions:)`:
+
+```swift
+func connectServer(_ completion: @escaping () -> Void) {
+        
+        RCIM.shared().initWithAppKey("Your App Key")
+        
+        RCIM.shared().connect(withToken: "YourToken", success: {
+            (userID) in
+            
+            print(NSLocalizedString("Connect successfully \(userID!)", comment: "successfull connection notice"))
+            
+            DispatchQueue.main.async(execute: { 
+                completion()
+            })
+            
+            
+        }, error: {
+            (_) in
+            print(NSLocalizedString("Connection failed", comment: "unsuccessful connection warning"))
+        }, tokenIncorrect: {
+            print(NSLocalizedString("Token is incorrect or invalid", comment: "Incorrect token notice"))
+        })
+    }
+```
+
+More knowledge about escaping closure: [Escaping and Nonescaping Closures in Swift 3](References/Escaping and Nonescaping Closures in Swift 3.md)
+
+### Modification in ConversationList
+
+In class `ConversationListViewController`'s function `viewDidLoad()` ,we should add statements like that to implement asynchronized connection:
+
+```swift
+let delegate = UIApplication.shared.delegate as? AppDelegate
+        
+        delegate?.connectServer {
+            self.title = NSLocalizedString("Connected", comment: "Conversation lisst Connected title")
+            self.reloadInputViews()
+        }
+```
+

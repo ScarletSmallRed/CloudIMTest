@@ -28,6 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, RCIMUserInfoDataSource {
                 completion()
             })
             
+            
         }, error: {
             (_) in
             print(NSLocalizedString("Connection failed", comment: "unsuccessful connection warning"))

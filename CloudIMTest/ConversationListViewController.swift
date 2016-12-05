@@ -12,6 +12,13 @@ class ConversationListViewController: RCConversationListViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let delegate = UIApplication.shared.delegate as? AppDelegate
+        
+        delegate?.connectServer {
+            self.title = NSLocalizedString("Connected", comment: "Conversation lisst Connected title")
+            self.reloadInputViews()
+        }
 
         // Do any additional setup after loading the view.
     }
