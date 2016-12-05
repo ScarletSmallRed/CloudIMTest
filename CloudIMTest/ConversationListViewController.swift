@@ -15,6 +15,8 @@ class ConversationListViewController: RCConversationListViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Do any additional setup after loading the view.
+        
         let delegate = UIApplication.shared.delegate as? AppDelegate
         
         delegate?.connectServer {
@@ -33,7 +35,6 @@ class ConversationListViewController: RCConversationListViewController {
             self.refreshConversationTableViewIfNeeded()
         }
 
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {

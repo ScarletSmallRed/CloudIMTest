@@ -229,3 +229,76 @@ let delegate = UIApplication.shared.delegate as? AppDelegate
         }
 ```
 
+## 3.7 Refresh UI and Perform Segue
+
+### Conversation Type
+
+In class `ConversationListViewController`,  Set the type of session that needs to be aggregated in the list:
+
+```swift
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Do any additional setup after loading the view.
+        
+        let delegate = UIApplication.shared.delegate as? AppDelegate
+        
+        delegate?.connectServer {
+            self.setDisplayConversationTypes([
+                RCConversationType.ConversationType_APPSERVICE.rawValue,
+                RCConversationType.ConversationType_CHATROOM.rawValue,
+                RCConversationType.ConversationType_CUSTOMERSERVICE.rawValue,
+                RCConversationType.ConversationType_DISCUSSION.rawValue,
+                RCConversationType.ConversationType_GROUP.rawValue,
+                RCConversationType.ConversationType_PRIVATE.rawValue,
+                RCConversationType.ConversationType_PUBLICSERVICE.rawValue,
+                RCConversationType.ConversationType_SYSTEM.rawValue
+                
+                ])
+            
+            self.refreshConversationTableViewIfNeeded()
+        }
+
+    }
+```
+
+![屏幕快照 2016-12-05 下午8.01.24](PicsForLog/屏幕快照 2016-12-05 下午8.01.24.png)
+
+### Tapping Event
+
+Need to override this click event from class `RCConversationListViewController`, jump to the specified session of the chat interface:
+
+```swift
+let conversationViewController = RCConversationViewController()
+
+// MARK: - RC Conversation View Controller
+    override func onSelectedTableRow(_ conversationModelType: RCConversationModelType, conversationModel model: RCConversationModel!, at indexPath: IndexPath!) {
+        
+        conversationViewController.targetId = model.targetId
+        conversationViewController.conversationType = .ConversationType_PRIVATE
+        conversationViewController.title = model.conversationTitle
+        
+        performSegue(withIdentifier: "ShowConversationVC", sender: self)
+    }
+```
+
+### Navigation
+
+Do a little preparation before navigation:
+
+```swift
+override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+        
+        let destinationVC = segue.destination as? RCConversationViewController
+        
+        destinationVC?.targetId = conversationViewController.targetId
+        destinationVC?.conversationType = .ConversationType_PRIVATE
+        destinationVC?.title = conversationViewController.title
+    }
+```
+
+
+
+
