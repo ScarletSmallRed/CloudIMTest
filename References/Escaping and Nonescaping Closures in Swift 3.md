@@ -12,7 +12,7 @@ The lifecycle of a non-escaping closure is simple:
 2. The function runs the closure (or not)
 3. The function returns
 
-![non-Escaping](../PicsForLog/non-Escaping.png)
+![closure-noescape](../PicsForLog/closure-noescape.png)
 
 Notice the closure has not *escaped* the body of the function. When the function ends, the passed-in closure goes out of scope and there were no additional references made to the closure.
 
