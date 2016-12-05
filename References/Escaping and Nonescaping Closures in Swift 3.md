@@ -25,7 +25,9 @@ You can probably guess what “escaping closure” means now. Inside the functio
 - **Asynchronous execution**: If you execute the closure asynchronously on a dispatch queue, the queue will hold onto the closure for you. You have no idea *when* the closure will be executed and there’s no guarantee it will complete before the function returns.
 - **Storage**: Storing the closure to a global variable, property, or any other bit of storage that lives on past the function call means the closure has also escaped.
 
-![closure-escape-1](/Users/shenshaohong/Desktop/CloudIMTest/PicsForLog/closure-escape-1.png)By the time the function ends, the closure could still be out there in the world somewhere. So why does that matter?
+![closure-escape](../PicsForLog/closure-escape.png)
+
+By the time the function ends, the closure could still be out there in the world somewhere. So why does that matter?
 
 ## Escaping and Non-Escaping in Swift 3
 
