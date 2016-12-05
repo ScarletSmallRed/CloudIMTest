@@ -22,9 +22,9 @@ class conversationViewController: RCConversationViewController {
         
         let delegate = UIApplication.shared.delegate as? AppDelegate
         
-        delegate?.connectServer {
-            self.title = NSLocalizedString("Connected", comment: "Conversation view connected title")
-        }
+        delegate?.connectServer({ 
+            self.title = NSLocalizedString("Connected", comment: "Conversation connected title")
+        })
     }
     
 
