@@ -15,11 +15,6 @@ class conversationViewController: RCConversationViewController {
 
         // Do any additional setup after loading the view.
         
-        self.targetId = "tester003"
-        self.title = "tester003"
-//        self.userName = "ssh1374"
-        self.conversationType = .ConversationType_PRIVATE
-        
         let delegate = UIApplication.shared.delegate as? AppDelegate
         
         delegate?.connectServer({ 

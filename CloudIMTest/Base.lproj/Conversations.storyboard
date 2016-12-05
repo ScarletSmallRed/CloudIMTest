@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="yVH-Dq-qbb">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -40,7 +44,7 @@
                     <navigationItem key="navigationItem" title="Conversations" id="di7-n8-KxK">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="xoD-v9-ll2">
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="show" identifier="ShowPrivateChats" id="nQj-Mw-6yA"/>
+                                <segue destination="BYZ-38-t0r" kind="show" identifier="ShowConversationVC" id="nQj-Mw-6yA"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -56,8 +60,7 @@
                     <tabBarItem key="tabBarItem" title="Conversation" image="coversation" id="dm8-ja-KDq"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4_7.fullscreen"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="SLD-6R-EGP">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="SLD-6R-EGP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
