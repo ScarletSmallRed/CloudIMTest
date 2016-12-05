@@ -12,13 +12,19 @@ class conversationViewController: RCConversationViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
         
-        self.targetId = "tester002"
-        print(RCIMClient.shared().currentUserInfo?.userId)
-        self.title = "tester002"
+        self.targetId = "tester003"
+        self.title = "tester003"
 //        self.userName = "ssh1374"
         self.conversationType = .ConversationType_PRIVATE
-        // Do any additional setup after loading the view.
+        
+        let delegate = UIApplication.shared.delegate as? AppDelegate
+        
+        delegate?.connectServer({ 
+            self.title = NSLocalizedString("Connected", comment: "Conversation connected title")
+        })
     }
     
 

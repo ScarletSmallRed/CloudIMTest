@@ -13,6 +13,29 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate, RCIMUserInfoDataSource {
 
     var window: UIWindow?
+    
+    
+    func connectServer(_ completion: @escaping () -> Void) {
+        
+        RCIM.shared().initWithAppKey("8brlm7uf8p1h3")
+        
+        RCIM.shared().connect(withToken: "J7RImv0P+1Ze1xN+aDcSrKPTsgTvHokSj1tjqTLHhWKR8R0k4ma8wKKWSw2que/sKtovA1On2+3rHNXfav7po2QnIdGdPBcA", success: {
+            (userID) in
+            
+            print(NSLocalizedString("Connect successfully \(userID!)", comment: "successfull connection notice"))
+            
+            DispatchQueue.main.async(execute: { 
+                completion()
+            })
+            
+            
+        }, error: {
+            (_) in
+            print(NSLocalizedString("Connection failed", comment: "unsuccessful connection warning"))
+        }, tokenIncorrect: {
+            print(NSLocalizedString("Token is incorrect or invalid", comment: "Incorrect token notice"))
+        })
+    }
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
@@ -22,19 +45,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, RCIMUserInfoDataSource {
 //        let tokenCache = UserDefaults.standard.object(forKey: "kDeviceToken") as? String
         
         // Initialize Appkey
-        RCIM.shared().initWithAppKey("8brlm7uf8p1h3")
+        
         
         // Test connection with token
-        RCIM.shared().connect(withToken: "J7RImv0P+1Ze1xN+aDcSrKPTsgTvHokSj1tjqTLHhWKR8R0k4ma8wKKWSw2que/sKtovA1On2+3rHNXfav7po2QnIdGdPBcA", success: {
-            (userID) in
-                print(NSLocalizedString("Connect successfully \(userID!)", comment: "successfull connection notice"))
-            
-        }, error: {
-            (_) in
-                print(NSLocalizedString("Connection failed", comment: "unsuccessful connection warning"))
-        }, tokenIncorrect: {
-            print(NSLocalizedString("Token is incorrect or invalid", comment: "Incorrect token notice"))
-        })
+        
         
         
         
@@ -136,8 +150,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, RCIMUserInfoDataSource {
         case "tester001":
             userInfo.name = "tester1"
             userInfo.portraitUri = "https://ss0.baidu.com/73t1bjeh1BF3odCf/it/u=1756054607,4047938258&fm=96&s=94D712D20AA1875519EB37BE0300C008"
-        case "tester002":
-            userInfo.name = "tester2"
+        case "tester003":
+            userInfo.name = "tester3"
             userInfo.portraitUri = "http://v1.qzone.cc/avatar/201407/27/09/23/53d45474e1312012.jpg!200x200.jpg"
         default:
             print(NSLocalizedString("User doesn't exist.", comment: "No user"))
