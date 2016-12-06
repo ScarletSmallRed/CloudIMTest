@@ -19,6 +19,7 @@ class ConversationListViewController: RCConversationListViewController {
         
         let delegate = UIApplication.shared.delegate as? AppDelegate
         
+        
         delegate?.connectServer {
             self.setDisplayConversationTypes([
                 RCConversationType.ConversationType_APPSERVICE.rawValue,
