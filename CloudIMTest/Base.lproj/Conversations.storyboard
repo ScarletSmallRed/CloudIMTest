@@ -53,11 +53,11 @@
             </objects>
             <point key="canvasLocation" x="709.60000000000002" y="138.98050974512745"/>
         </scene>
-        <!--Conversation-->
+        <!--Chats-->
         <scene sceneID="vA5-Ph-eAC">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yVH-Dq-qbb" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Conversation" image="coversation" id="dm8-ja-KDq"/>
+                    <tabBarItem key="tabBarItem" title="Chats" image="coversation" id="dm8-ja-KDq"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="SLD-6R-EGP">
@@ -76,6 +76,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="coversation" width="59" height="45"/>
+        <image name="coversation" width="29" height="22"/>
     </resources>
 </document>
