@@ -148,6 +148,12 @@ Concrete code and the final result:
 
 ![PopMenu](PicsForLog/PopMenu.png)
 
+## 4.5 StackView
 
+Build login interface with StackView:
+
+![StackView1](PicsForLog/StackView1.png)
+
+![StackView](PicsForLog/StackView.png)
 
 
