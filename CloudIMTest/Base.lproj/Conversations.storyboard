@@ -44,20 +44,23 @@
                     <navigationItem key="navigationItem" title="Conversations" id="di7-n8-KxK">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="xoD-v9-ll2">
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="show" identifier="ShowConversationVC" id="nQj-Mw-6yA"/>
+                                <action selector="showMenu:" destination="Qyv-QX-wZJ" id="HF3-9d-jRd"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="ShowConversationVC" id="JH2-kL-plJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xML-0U-GlU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="709.60000000000002" y="138.98050974512745"/>
         </scene>
-        <!--Conversation-->
+        <!--Chats-->
         <scene sceneID="vA5-Ph-eAC">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yVH-Dq-qbb" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Conversation" image="coversation" id="dm8-ja-KDq"/>
+                    <tabBarItem key="tabBarItem" title="Chats" image="coversation" id="dm8-ja-KDq"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="SLD-6R-EGP">
@@ -76,6 +79,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="coversation" width="59" height="45"/>
+        <image name="coversation" width="29" height="22"/>
     </resources>
 </document>

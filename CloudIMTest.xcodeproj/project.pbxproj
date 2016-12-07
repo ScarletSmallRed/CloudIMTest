@@ -20,6 +20,7 @@
 		CABFA3DA1DF0155100AA0D4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CABFA3D91DF0155100AA0D4C /* Assets.xcassets */; };
 		CABFA3DD1DF0155100AA0D4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CABFA3DB1DF0155100AA0D4C /* LaunchScreen.storyboard */; };
 		CAD1AF421DF0562100D08C44 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = CAD1AF411DF0562100D08C44 /* Podfile */; };
+		CAED51DF1DF83DC300C53F8C /* RoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAED51DE1DF83DC300C53F8C /* RoundImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		CABFA3DC1DF0155100AA0D4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CABFA3DE1DF0155100AA0D4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CAD1AF411DF0562100D08C44 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		CAED51DE1DF83DC300C53F8C /* RoundImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundImageView.swift; sourceTree = "<group>"; };
 		D57C469C5370C72249ABE471 /* libPods-CloudIMTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CloudIMTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -86,6 +88,7 @@
 				CA7A1E441DF3FFBB002145BE /* Conversations.storyboard */,
 				CA7A1E421DF3F65E002145BE /* ConversationListViewController.swift */,
 				CA40C4101DF250930027AD18 /* conversationViewController.swift */,
+				CAED51DE1DF83DC300C53F8C /* RoundImageView.swift */,
 				CABFA3D91DF0155100AA0D4C /* Assets.xcassets */,
 				CABFA3DB1DF0155100AA0D4C /* LaunchScreen.storyboard */,
 				CABFA3DE1DF0155100AA0D4C /* Info.plist */,
@@ -243,6 +246,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAED51DF1DF83DC300C53F8C /* RoundImageView.swift in Sources */,
 				CABFA3D81DF0155100AA0D4C /* CloudIMTest.xcdatamodeld in Sources */,
 				CA7A1E431DF3F65E002145BE /* ConversationListViewController.swift in Sources */,
 				CA40C4111DF250930027AD18 /* conversationViewController.swift in Sources */,

@@ -11,6 +11,27 @@ import UIKit
 class ConversationListViewController: RCConversationListViewController {
     
     let conversationViewController = RCConversationViewController()
+    
+    @IBAction func showMenu(_ sender: UIBarButtonItem) {
+        
+        let items = [
+            MenuItem(title: "Serve", iconName: "serve", glow: UIColor.blue, index: 0),
+            MenuItem(title: "About", iconName: "about", glow: UIColor.blue, index: 1)
+        ]
+        
+        let menu = PopMenu(frame: self.view.bounds, items: items)
+        
+        menu?.menuAnimationType = .sina
+        
+        menu?.didSelectedItemCompletion = { (selectedItem) in
+            
+            print(selectedItem!.title)
+            
+        }
+        
+        menu?.show(at: self.view)
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +39,7 @@ class ConversationListViewController: RCConversationListViewController {
         // Do any additional setup after loading the view.
         
         let delegate = UIApplication.shared.delegate as? AppDelegate
+        
         
         delegate?.connectServer {
             self.setDisplayConversationTypes([
