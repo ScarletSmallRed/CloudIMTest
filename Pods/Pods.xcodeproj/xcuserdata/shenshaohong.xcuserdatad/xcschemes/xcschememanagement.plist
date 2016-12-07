@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>KxMenu.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-CloudIMTest.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -12,7 +17,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>FD0A9D416682DE83B3D6262D5BF51394</key>
+		<key>755345325818102A8B1DDDD378EC9676</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>861621ED0D42BEA8E3D69708FE72453A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
