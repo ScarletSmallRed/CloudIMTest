@@ -156,4 +156,47 @@ Build login interface with StackView:
 
 ![StackView](PicsForLog/StackView.png)
 
+## 4.6 Real-Time Rendering of Storyboard
 
+### CornerRadius and Border of Object
+
+Create class `RoudImageView` and associate it with the image of the login interface. Write the program as follows:
+
+```swift
+import UIKit
+
+@IBDesignable
+class RoundImageView: UIImageView {
+    
+    @IBInspectable var cornerRadius: CGFloat = 0 {
+        didSet {
+            layer.cornerRadius = cornerRadius
+            layer.masksToBounds = (cornerRadius > 0)
+          
+        }
+    }
+    
+    @IBInspectable var borderWidth: CGFloat = 0 {
+        didSet {
+            layer.borderWidth = borderWidth
+        }
+    }
+    
+    @IBInspectable var borderColor: UIColor? {
+        didSet {
+            layer.borderColor = borderColor?.cgColor
+        }
+    }
+
+}
+```
+
+`masksToBounds` is the function of the `CALayer` class; `clipsToBounds` is the function of the `UIView` class and will eventually call the `masksToBounds` method. So use `masksToBounds` to conserve resources a little.
+
+### Real-time effects
+
+You can modify the parameters in the sidebar and preview the effect in real time on the storyboard.
+
+![RealTime](PicsForLog/RealTime.png)
+
+![RealTime1](PicsForLog/RealTime1.png)
