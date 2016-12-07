@@ -58,7 +58,7 @@ func ClickMenu1() {
         performSegue(withIdentifier: "ShowConversationVC", sender: self)
     }
     
-    func ClickMenu2() {
+func ClickMenu2() {
         
         let conversationVC = RCConversationViewController()
         
