@@ -11,6 +11,33 @@ import UIKit
 class ConversationListViewController: RCConversationListViewController {
     
     let conversationViewController = RCConversationViewController()
+    
+    @IBAction func showMenu(_ sender: UIBarButtonItem) {
+        
+        var frame = (sender.value(forKey: "view") as? UIView)?.frame
+        frame?.origin.y += 30
+        
+        KxMenu.show(in: self.view, from: frame!, menuItems: [
+            KxMenuItem(NSLocalizedString("Serve", comment: "Serve"),image: UIImage(named: "serve"), target:self, action: "ClickMenu1"),
+            KxMenuItem(NSLocalizedString("Test", comment: "Test"),image: UIImage(named: "contact"), target:self,action: "ClickMenu2")
+            ])
+        
+    }
+    
+    func ClickMenu1() {
+        print("Click Menu1")
+    }
+    
+    func ClickMenu2() {
+        
+        let conversationVC = RCConversationViewController()
+        
+        conversationVC.targetId = "tester002"
+        conversationVC.title = "tester2"
+        conversationVC.conversationType = .ConversationType_PRIVATE
+        
+        navigationController?.pushViewController(conversationVC, animated: true)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

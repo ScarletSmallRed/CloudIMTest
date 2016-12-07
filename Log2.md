@@ -1,304 +1,120 @@
-
-
 [TOC]
 
-# 3 Chat and Conversation, CocoaPods and Storyboard
+# 2 Bridge and CocoaPods Configuration
 
-## 3.1 Elements of The Project
+### Object
 
-### User System Flow
+* Fast Integrate chat UI component and service framework.
+* Use CocoaPods to configure third-party components.
+* Use the bridge-header files to use Object-C code seamlessly.
 
-* Application
-* `RongCloud`(stores information of friend relationship and group relation)
-* Server(stores user information)
+## 2.1 IM Framwork Introduction
 
-### Set Current User Information
+### RongCloudIMKit
 
-* User class `RCIMClient`(Singleton, Set the user logging in)
+* Integrate a complete group of chat UI.
+* UI system and User system in the application are seperated.
 
-### Private Chatting UI
+### Some IM Cloud Examples
 
-* User class `RCConversationViewController`(integrated in `RongCloud`)
+* Parse.com
+* LeanCloud
+* RongCloud
 
-### Private Chatting User Information
+## 2.2 Create Project and Install CocoaPods
 
-* targetId
-* userName
-* conversation Type
-* navigation bar title
+### Some Basic CocoaPods Commands
 
-## 3.2 Achievement of Private Chatting
-
-### Main Functions
-
-- Common functions of a single conversation
-- Text
-- images
-- Voice talk
-- Send location
-
-### User System Flow Test
-
-View `My Application` on `RongCloud` official website and enter user's basic information in the API debugging section to get the testing token.
-
-### Private Chatting UI
-
-Create class `conversationViewController` inheriting class `RCConversationViewController` from `RongIMKit`:
-
-```swift
-class conversationViewController: RCConversationViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-}
+```shell
+//Update Gem:
+$ sudo gem update --system
+//Switch CocoaPods date source:
+$ gem sources --remove https://rubygems.org/
+$ gem sources -a http://ruby.taobao.org/
+$ gem sources -l
+//Install CocoaPods:
+$ sudo gem install cocoaPods
+//Set pod repo:
+$ pod setup
+//Test:
+//If there is a version number, then it is already installed successfully.
+$ pod
+//Install third-party framework:
+$ pod install --no-repo-update
+$ pod update --no-repo-update
 ```
 
-Build and run the current scheme:
+## 2.3 Use Pod to Configure Workspace:
 
-![屏幕快照 2016-12-03 上午9.18.42](PicsForLog/屏幕快照 2016-12-03 上午9.18.42.png)
+### Search RongCloud UI Component
 
-## 3.3 Set Up Private Chatting People and Test
+In advance, you can view the versison information of the component through the search function, with the following command:
 
-### Initialize SDK
+```shell
+$ pod search RongCloudIMKit
+```
 
-Need to add a SDK reference to project's Bridging-Header.h file.
+To integrate RongCloudIMKit into Xcode project using CocoaPods, specify it in the `Podfile`:
 
 ```swift
+target 'CloudIMTest' do
+	pod 'RongCloudIMKit'
+end
+```
+
+### Installation
+
+Then, run the following command:
+
+```shell
+$ pod install
+```
+
+### Bridging Header File
+
+Create file `CloudIMTest-Bridging-Header.h` in the project , and specify it in the file:
+
+```objective-c
 #import <RongIMKit/RongIMKit.h>
 ```
 
-Pass App Key,  getted in `RongCloud Development Center`, into function `initWithAppKey` to initialize SDK.
+And then **Clean** and **Build** the project.
 
-```swift
-RCIM.sharedRCIM().initWithAppKey("YourTestAppKey")
+## 2.4 Connection Test
+
+### Register Application
+
+* Registration
+* My application
+* Create application
+* Get Appkey and secrete
+* API Test: Acquisition and testing of token
+
+### Initialization Code
+
+Query saved token:
+
+```Swift
+let tokenCache = UserDefaults.standard.object(forKey: "kDeviceToken") as? String
 ```
 
-### Connect Server
+Initialize AppKey:
 
-Through the RCIM of a single case, introduce the Token getted in the last step into function `RCIM.shared().connect(withToken: String!, success: ((String?) -> Void)!, error: ((RCConnectErrorCode) -> Void)!, tokenIncorrect: (() -> Void)!)`,  and then you can establish a connection with the server.
-
-```swift
-RCIM.sharedRCIM().connectWithToken("YourTestUserToken",
-success: { (userId) -> Void in
-    print("Successfully, ID：\(userId)")
-}, error: { (status) -> Void in
-    print("Wrong code:\(status.rawValue)")
-}, tokenIncorrect: {
-    print("Incorrect token.")
-})
+```Swift
+RCIM.shared().initWithAppKey("8brlm7uf8p1h3")
 ```
 
-### Start The Chatting Interface
+Test connection with token:
 
-Create a class `ConversationViewController` ，subclass of  `RCConversationViewController` and set property such as `conversationType`, `targetId` and `title` to get start:
-
-```swift
-self.targetId = "tester002"
-self.title = "tester002"
-self.conversationType = .ConversationType_PRIVATE
-```
-
-### Test The Conversation
-
-In `My Application`, you can use `API Debug` —> `Send Private Chatting Message` to test the application:
-
-![屏幕快照 2016-12-04 上午11.04.11](PicsForLog/屏幕快照 2016-12-04 上午11.04.11.png)
-
-![屏幕快照 2016-12-04 上午11.04.28](PicsForLog/屏幕快照 2016-12-04 上午11.04.28.png)
-
-## 3.4 Imporvement of Storyboard
-
-### Tar Bar Controller
-
-Overall
-
-![屏幕快照 2016-12-04 下午3.49.15](PicsForLog/屏幕快照 2016-12-04 下午3.49.15.png)
-
-### Refactor to Storyboard
-
-![屏幕快照 2016-12-04 下午3.48.38](PicsForLog/屏幕快照 2016-12-04 下午3.48.38.png)
-
-### Navigation Font Style
-
-The Swift code is showed in Class `AppDelegate` 's function ` application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool` as below:
-
-```swift
-UINavigationBar.appearance().barTintColor = UIColor(red: 0 / 255, green: 0 / 255, blue: 0 / 255, alpha: 1)
-        UINavigationBar.appearance().tintColor = UIColor.white
-        
-        UIApplication.shared.statusBarStyle = .lightContent
-        
-        if let barFont = UIFont(name: "Helvetica Neue", size: 20.0) {
-            UINavigationBar.appearance().titleTextAttributes = [
-                NSForegroundColorAttributeName: UIColor.white,
-                           NSFontAttributeName: barFont]
-        }
-```
-
-## 3.5 Set The Provider of User Information
-
-* Class `AppDelegate` should inherit class `RCIMUserInfoDataSource`:
-
-```swift
-class AppDelegate: UIResponder, UIApplicationDelegate, RCIMUserInfoDataSource
-```
-
-* And then implement the function `getUserInfo(withUserId userId: String!, completion: ((RCUserInfo?) -> Void)!)` by self:
-
-```swift
-// MARK: - RCIM User Info
-    
-    func getUserInfo(withUserId userId: String!, completion: ((RCUserInfo?) -> Void)!) {
-        
-        let userInfo = RCUserInfo()
-        userInfo.userId = userId
-        
-        
-        switch userId {
-        case "tester001":
-            userInfo.name = "tester1"
-            userInfo.portraitUri = "https://ss0.baidu.com/73t1bjeh1BF3odCf/it/u=1756054607,4047938258&fm=96&s=94D712D20AA1875519EB37BE0300C008"
-        case "tester002":
-            userInfo.name = "tester2"
-            userInfo.portraitUri = "http://v1.qzone.cc/avatar/201407/27/09/23/53d45474e1312012.jpg!200x200.jpg"
-        default:
-            print(NSLocalizedString("User doesn't exist.", comment: "No user"))
-        }
-        
-        completion(userInfo)
-    }
-```
-
-* Set class `AppDelegate` as the `RCIM` data source in function `application( _:didFinishLaunchingWithOptions)  `:
-
-```swift
-RCIM.shared().userInfoDataSource = self
-```
-
-## 3.6 Display Conversation List Content-Asynchronous Connection
-
-### Modification in AppDelegate
-
-Add a new function `connectServer(_:)` some of whose statements are extracted from function `application(_: didFinishLaunchingWithOptions:)`:
-
-```swift
-func connectServer(_ completion: @escaping () -> Void) {
-        
-        RCIM.shared().initWithAppKey("Your App Key")
-        
-        RCIM.shared().connect(withToken: "YourToken", success: {
-            (userID) in
-            
-            print(NSLocalizedString("Connect successfully \(userID!)", comment: "successfull connection notice"))
-            
-            DispatchQueue.main.async(execute: { 
-                completion()
-            })
-            
-            
+```Swift
+RCIM.shared().connect(withToken: "GWEUq7mJS8YeGALAd6cYa6PTsgTvHokSj1tjqTLHhWKR8R0k4ma8wNMFlFVjNU0ziNHmbRxOyqwr3AtoeblvsmQnIdGdPBcA", success: {
+            (_) in
+                print(NSLocalizedString("Connect successfully", comment: "successfull connection notice"))
         }, error: {
             (_) in
-            print(NSLocalizedString("Connection failed", comment: "unsuccessful connection warning"))
+                print(NSLocalizedString("Connection failed", comment: "unsuccessful connection warning"))
         }, tokenIncorrect: {
             print(NSLocalizedString("Token is incorrect or invalid", comment: "Incorrect token notice"))
         })
-    }
 ```
-
-More knowledge about escaping closure: [Escaping and Nonescaping Closures in Swift 3](References/Escaping and Nonescaping Closures in Swift 3.md)
-
-### Modification in ConversationList
-
-In class `ConversationListViewController`'s function `viewDidLoad()` ,we should add statements like that to implement asynchronized connection:
-
-```swift
-let delegate = UIApplication.shared.delegate as? AppDelegate
-        
-        delegate?.connectServer {
-            self.title = NSLocalizedString("Connected", comment: "Conversation lisst Connected title")
-            self.reloadInputViews()
-        }
-```
-
-## 3.7 Refresh UI and Perform Segue
-
-### Conversation Type
-
-In class `ConversationListViewController`,  Set the type of session that needs to be aggregated in the list:
-
-```swift
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
-        
-        let delegate = UIApplication.shared.delegate as? AppDelegate
-        
-        delegate?.connectServer {
-            self.setDisplayConversationTypes([
-                RCConversationType.ConversationType_APPSERVICE.rawValue,
-                RCConversationType.ConversationType_CHATROOM.rawValue,
-                RCConversationType.ConversationType_CUSTOMERSERVICE.rawValue,
-                RCConversationType.ConversationType_DISCUSSION.rawValue,
-                RCConversationType.ConversationType_GROUP.rawValue,
-                RCConversationType.ConversationType_PRIVATE.rawValue,
-                RCConversationType.ConversationType_PUBLICSERVICE.rawValue,
-                RCConversationType.ConversationType_SYSTEM.rawValue
-                
-                ])
-            
-            self.refreshConversationTableViewIfNeeded()
-        }
-
-    }
-```
-
-![屏幕快照 2016-12-05 下午8.01.24](PicsForLog/屏幕快照 2016-12-05 下午8.01.24.png)
-
-### Tapping Event
-
-Need to override this click event from class `RCConversationListViewController`, jump to the specified session of the chat interface:
-
-```swift
-let conversationViewController = RCConversationViewController()
-
-// MARK: - RC Conversation View Controller
-    override func onSelectedTableRow(_ conversationModelType: RCConversationModelType, conversationModel model: RCConversationModel!, at indexPath: IndexPath!) {
-        
-        conversationViewController.targetId = model.targetId
-        conversationViewController.conversationType = .ConversationType_PRIVATE
-        conversationViewController.title = model.conversationTitle
-        
-        performSegue(withIdentifier: "ShowConversationVC", sender: self)
-    }
-```
-
-### Navigation
-
-Do a little preparation before navigation:
-
-```swift
-override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-        
-        let destinationVC = segue.destination as? RCConversationViewController
-        
-        destinationVC?.targetId = conversationViewController.targetId
-        destinationVC?.conversationType = .ConversationType_PRIVATE
-        destinationVC?.title = conversationViewController.title
-    }
-```
-
-
-
 
