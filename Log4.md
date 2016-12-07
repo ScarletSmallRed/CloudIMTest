@@ -1,3 +1,5 @@
+[TOC]
+
 # 4 Third Party Libraries
 
 ## 4.1 Fix Some UI Bugs
@@ -23,9 +25,26 @@ $ pod search [LibraryName]
 
 ![屏幕快照 2016-12-06 下午9.21.33](PicsForLog/屏幕快照 2016-12-06 下午9.21.33.png)
 
-## 4.2 KxMenu
+## 4.3 KxMenu
 
-### PopMenu
+### Preparation
+
+Add one line in file `Podfile`, and the final file is:
+
+```
+target 'CloudIMTest' do
+    pod 'RongCloudIMKit'
+    pod 'KxMenu', '~> 1'
+end
+```
+
+Save and quict file `Podfile` and then use `CocoaPods command` to install the library:
+
+```shell
+$ pod install
+```
+
+### Menu
 
 Establish action connection between Add `UIBarButtonItem` and class `ConversationListViewController`:
 
@@ -74,3 +93,61 @@ func ClickMenu2() {
 ```
 
 ![屏幕快照 2016-12-07 上午10.57.02](PicsForLog/屏幕快照 2016-12-07 上午10.57.02.png)
+
+## 4.4 Full-Screen Animated Menu
+
+### PopMenu
+
+An interesting third-party library.
+
+PopMenu is pop animation menu inspired by Sina weibo / NetEase app.
+
+### Preparation
+
+Add one line in file `Podfile`, and the final file is:
+
+```
+target 'CloudIMTest' do
+    pod 'RongCloudIMKit'
+    pod 'KxMenu', '~> 1'
+    pod 'PopMenu', '~> 2.4'
+end
+```
+
+Save and quict file `Podfile` and then use `CocoaPods command` to install the library:
+
+```shell
+$ pod install
+```
+
+### Achievement in Code
+
+Concrete code and the final result:
+
+```swift
+@IBAction func showMenu(_ sender: UIBarButtonItem) {
+        
+        let items = [
+            MenuItem(title: "Serve", iconName: "serve", glow: UIColor.blue, index: 0),
+            MenuItem(title: "About", iconName: "about", glow: UIColor.blue, index: 1)
+        ]
+        
+        let menu = PopMenu(frame: self.view.bounds, items: items)
+        
+        menu?.menuAnimationType = .sina
+        
+        menu?.didSelectedItemCompletion = { (selectedItem) in
+            
+            print(selectedItem!.title)
+            
+        }
+        
+        menu?.show(at: self.view)
+    }
+```
+
+![PopMenu](PicsForLog/PopMenu.png)
+
+
+
+
