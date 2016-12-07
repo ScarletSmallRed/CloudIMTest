@@ -36,8 +36,8 @@ Establish action connection between Add `UIBarButtonItem` and class `Conversatio
         frame?.origin.y += 30
         
         KxMenu.show(in: self.view, from: frame!, menuItems: [
-            KxMenuItem(NSLocalizedString("Serve", comment: "Serve"),image: UIImage(named: "serve"), target:self, action: "ClickMenu1"),
-            KxMenuItem(NSLocalizedString("Test", comment: "Test"),image: UIImage(named: "contact"), target:self,action: "ClickMenu2")
+            KxMenuItem(NSLocalizedString("Test1", comment: "Test1"),image: UIImage(named: "contact"), target:self, action: "ClickMenu1"),
+            KxMenuItem(NSLocalizedString("Test2", comment: "Test2"),image: UIImage(named: "contact"), target:self,action: "ClickMenu2")
             ])
         
     }
@@ -47,11 +47,15 @@ Establish action connection between Add `UIBarButtonItem` and class `Conversatio
 
 ### Push ViewController Test
 
-After tapping on Add `UIBarButtonItem`, navigation controller push the specified view controller:
+After tapping on Add `UIBarButtonItem`, navigation controller push the specified view controller(using 2 different methods to realize this function):
 
 ```swift
 func ClickMenu1() {
-        print("Click Menu1")
+        conversationViewController.targetId = "tester001"
+        conversationViewController.title = "tester1"
+        conversationViewController.conversationType = .ConversationType_PRIVATE
+        
+        performSegue(withIdentifier: "ShowConversationVC", sender: self)
     }
     
     func ClickMenu2() {
@@ -62,7 +66,10 @@ func ClickMenu1() {
         conversationVC.title = "tester2"
         conversationVC.conversationType = .ConversationType_PRIVATE
         
- navigationController?.pushViewController(conversationVC, animated: true)
+        navigationController?.pushViewController(conversationVC, animated: true)
+        
+        tabBarController?.tabBar.isHidden = true
+        
     }
 ```
 
