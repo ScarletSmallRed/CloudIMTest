@@ -14,6 +14,21 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>PopMenu.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>XHRealTimeBlur.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>pop.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
@@ -22,7 +37,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>861621ED0D42BEA8E3D69708FE72453A</key>
+		<key>75DBB6EF6717B2F157ABB6A01FAB4351</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9EAC7F322D58D34A89B706A7DB5B0103</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DC88B29E6044E1D5B2B74D44E041D2A7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>ED95F28C6DC9651E0626AAFF86F8023D</key>
 		<dict>
 			<key>primary</key>
 			<true/>

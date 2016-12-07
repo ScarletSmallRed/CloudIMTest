@@ -14,37 +14,24 @@ class ConversationListViewController: RCConversationListViewController {
     
     @IBAction func showMenu(_ sender: UIBarButtonItem) {
         
-        var frame = (sender.value(forKey: "view") as? UIView)?.frame
-        frame?.origin.y += 30
+        let items = [
+            MenuItem(title: "Serve", iconName: "serve", glow: UIColor.blue, index: 0),
+            MenuItem(title: "About", iconName: "about", glow: UIColor.blue, index: 1)
+        ]
         
-        KxMenu.show(in: self.view, from: frame!, menuItems: [
-            KxMenuItem(NSLocalizedString("Test1", comment: "Test1"),image: UIImage(named: "contact"), target:self, action: "ClickMenu1"),
-            KxMenuItem(NSLocalizedString("Test2", comment: "Test2"),image: UIImage(named: "contact"), target:self,action: "ClickMenu2")
-            ])
+        let menu = PopMenu(frame: self.view.bounds, items: items)
         
+        menu?.menuAnimationType = .sina
+        
+        menu?.didSelectedItemCompletion = { (selectedItem) in
+            
+            print(selectedItem!.title)
+            
+        }
+        
+        menu?.show(at: self.view)
     }
     
-    func ClickMenu1() {
-        conversationViewController.targetId = "tester001"
-        conversationViewController.title = "tester1"
-        conversationViewController.conversationType = .ConversationType_PRIVATE
-        
-        performSegue(withIdentifier: "ShowConversationVC", sender: self)
-    }
-    
-    func ClickMenu2() {
-        
-        let conversationVC = RCConversationViewController()
-        
-        conversationVC.targetId = "tester002"
-        conversationVC.title = "tester2"
-        conversationVC.conversationType = .ConversationType_PRIVATE
-        
-        navigationController?.pushViewController(conversationVC, animated: true)
-        
-        tabBarController?.tabBar.isHidden = true
-        
-    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

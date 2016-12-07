@@ -1,3 +1,5 @@
+[TOC]
+
 ## Let's Swift
 
 Use Swift to create a full-featured chat APP basing on: 
@@ -9,7 +11,7 @@ Use Swift to create a full-featured chat APP basing on:
 
 ## Log
 
-More detail is  showed by links below:
+More detail is  showed in the link below:
 
 * [Log1(Git in Xcode)](Log1.md)
 
@@ -25,4 +27,5 @@ More detail is  showed by links below:
 
 * [RongCloudIMKit](https://github.com/huangjinlei/RongCloudIM)
 * [KxMenu](https://github.com/kolyvan/kxmenu)
+* [PopMenu](https://github.com/xhzengAIB/PopMenu)
 
