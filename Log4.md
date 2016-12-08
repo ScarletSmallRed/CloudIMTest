@@ -200,3 +200,5 @@ You can modify the parameters in the sidebar and preview the effect in real time
 ![RealTime](PicsForLog/RealTime.png)
 
 ![RealTime1](PicsForLog/RealTime1.png)
+
+![AutomaticFit](PicsForLog/AutomaticFit.gif)
