@@ -20,11 +20,5 @@ override func viewDidAppear(_ animated: Bool) {
 
 * Final animation effect:
 
-<iframe height=500 width=500 src="PicsForLog/StackView.gifcask">
-
-<div align=center>
-<img src="PicsForLog/StackView.gifcask" width="400" height="400"/>
-</div>
-
-
+![StackView](PicsForLog/StackView.gif)
 
