@@ -24,9 +24,9 @@ class LoginViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        UIView.animate(withDuration: 2, animations: {
+        UIView.animate(withDuration: 2) {
             self.loginStackView.axis = .vertical
-        })
+        }
     }
     
 
