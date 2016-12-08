@@ -14,6 +14,7 @@
 		CA7A1E481DF3FFCD002145BE /* Serve.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA7A1E471DF3FFCD002145BE /* Serve.storyboard */; };
 		CA7A1E4B1DF400CD002145BE /* Contacts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA7A1E491DF400CD002145BE /* Contacts.storyboard */; };
 		CA7A1E4D1DF400DA002145BE /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA7A1E4C1DF400DA002145BE /* About.storyboard */; };
+		CAAB15121DF99B800047F26C /* RCAnimatedImagesView.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAB15111DF99B800047F26C /* RCAnimatedImagesView.m */; };
 		CABFA3D01DF0155100AA0D4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABFA3CF1DF0155100AA0D4C /* AppDelegate.swift */; };
 		CABFA3D51DF0155100AA0D4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CABFA3D31DF0155100AA0D4C /* Main.storyboard */; };
 		CABFA3D81DF0155100AA0D4C /* CloudIMTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CABFA3D61DF0155100AA0D4C /* CloudIMTest.xcdatamodeld */; };
@@ -35,6 +36,8 @@
 		CA7A1E4A1DF400CD002145BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Contacts.storyboard; sourceTree = "<group>"; };
 		CA7A1E4C1DF400DA002145BE /* About.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = About.storyboard; sourceTree = "<group>"; };
 		CA930BB11DF1088700EBA1E0 /* CloudIMTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CloudIMTest-Bridging-Header.h"; sourceTree = "<group>"; };
+		CAAB15101DF99B800047F26C /* RCAnimatedImagesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCAnimatedImagesView.h; sourceTree = "<group>"; };
+		CAAB15111DF99B800047F26C /* RCAnimatedImagesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCAnimatedImagesView.m; sourceTree = "<group>"; };
 		CABFA3CC1DF0155100AA0D4C /* CloudIMTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloudIMTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CABFA3CF1DF0155100AA0D4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CABFA3D41DF0155100AA0D4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -43,7 +46,7 @@
 		CABFA3DC1DF0155100AA0D4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CABFA3DE1DF0155100AA0D4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CAC00A761DF951F600E8D968 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		CAD1AF411DF0562100D08C44 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		CAD1AF411DF0562100D08C44 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		CAED51DE1DF83DC300C53F8C /* RoundImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundImageView.swift; sourceTree = "<group>"; };
 		D57C469C5370C72249ABE471 /* libPods-CloudIMTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CloudIMTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -82,6 +85,8 @@
 		CABFA3CE1DF0155100AA0D4C /* CloudIMTest */ = {
 			isa = PBXGroup;
 			children = (
+				CAAB15101DF99B800047F26C /* RCAnimatedImagesView.h */,
+				CAAB15111DF99B800047F26C /* RCAnimatedImagesView.m */,
 				CABFA3CF1DF0155100AA0D4C /* AppDelegate.swift */,
 				CABFA3D31DF0155100AA0D4C /* Main.storyboard */,
 				CA7A1E4C1DF400DA002145BE /* About.storyboard */,
@@ -254,6 +259,7 @@
 				CABFA3D81DF0155100AA0D4C /* CloudIMTest.xcdatamodeld in Sources */,
 				CA7A1E431DF3F65E002145BE /* ConversationListViewController.swift in Sources */,
 				CA40C4111DF250930027AD18 /* conversationViewController.swift in Sources */,
+				CAAB15121DF99B800047F26C /* RCAnimatedImagesView.m in Sources */,
 				CABFA3D01DF0155100AA0D4C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

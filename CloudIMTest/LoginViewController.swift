@@ -8,14 +8,28 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, RCAnimatedImagesViewDelegate {
     
     @IBOutlet weak var loginStackView: UIStackView!
+    @IBOutlet weak var wallpaperImageView: RCAnimatedImagesView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        wallpaperImageView.delegate = self
+        wallpaperImageView.startAnimating()
 
         // Do any additional setup after loading the view.
+    }
+    
+    func animatedImagesNumber(ofImages animatedImagesView: RCAnimatedImagesView!) -> UInt {
+        return 3
+    }
+    
+    func animatedImagesView(_ animatedImagesView: RCAnimatedImagesView!, imageAt index: UInt) -> UIImage! {
+        let imageNames = ["image1", "image2", "image3"]
+        let intIndex = Int(index)
+        return UIImage(named: imageNames[intIndex])
     }
 
     override func didReceiveMemoryWarning() {

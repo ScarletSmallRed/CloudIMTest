@@ -23,6 +23,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mFm-iw-t5O" customClass="RCAnimatedImagesView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="barrafina" translatesAutoresizingMaskIntoConstraints="NO" id="QAf-N2-wEd" customClass="RoundImageView" customModule="CloudIMTest" customModuleProvider="target">
                                 <rect key="frame" x="148" y="90" width="80" height="80"/>
                                 <constraints>
@@ -37,7 +41,7 @@
                                         <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
@@ -97,8 +101,12 @@
                         <constraints>
                             <constraint firstItem="64s-Yc-vJg" firstAttribute="leading" secondItem="VPH-dD-xrj" secondAttribute="leadingMargin" id="8rH-E0-YSB"/>
                             <constraint firstItem="KsF-4L-7X9" firstAttribute="centerX" secondItem="VPH-dD-xrj" secondAttribute="centerX" id="ERA-aU-KUd"/>
+                            <constraint firstItem="mFm-iw-t5O" firstAttribute="leading" secondItem="VPH-dD-xrj" secondAttribute="leading" id="Ikc-tx-HxL"/>
+                            <constraint firstItem="mFm-iw-t5O" firstAttribute="top" secondItem="VPH-dD-xrj" secondAttribute="top" id="MCE-y9-Ibh"/>
                             <constraint firstItem="qKs-zQ-ssJ" firstAttribute="top" secondItem="KsF-4L-7X9" secondAttribute="bottom" constant="100" id="Q5q-ut-vtR"/>
+                            <constraint firstAttribute="trailing" secondItem="mFm-iw-t5O" secondAttribute="trailing" id="brl-go-ipF"/>
                             <constraint firstItem="4ZS-WB-meq" firstAttribute="centerX" secondItem="VPH-dD-xrj" secondAttribute="centerX" id="ey2-xV-1xv"/>
+                            <constraint firstItem="qKs-zQ-ssJ" firstAttribute="top" secondItem="mFm-iw-t5O" secondAttribute="bottom" id="hMk-lo-lOf"/>
                             <constraint firstItem="4ZS-WB-meq" firstAttribute="width" secondItem="VPH-dD-xrj" secondAttribute="width" multiplier="0.85" id="lst-Dx-sMG"/>
                             <constraint firstAttribute="trailingMargin" secondItem="64s-Yc-vJg" secondAttribute="trailing" id="pck-Sm-rdz"/>
                             <constraint firstItem="QAf-N2-wEd" firstAttribute="top" secondItem="mqc-US-8vD" secondAttribute="bottom" constant="70" id="ryH-bo-dGF"/>
@@ -110,11 +118,12 @@
                     </view>
                     <connections>
                         <outlet property="loginStackView" destination="64s-Yc-vJg" id="LOg-VT-unD"/>
+                        <outlet property="wallpaperImageView" destination="mFm-iw-t5O" id="tE6-EB-PZc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dKs-5C-6Dr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4111" y="833"/>
+            <point key="canvasLocation" x="-4111.1999999999998" y="832.53373313343332"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="7Qe-Oz-zBz">

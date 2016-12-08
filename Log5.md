@@ -22,3 +22,4 @@ override func viewDidAppear(_ animated: Bool) {
 
 ![StackView](PicsForLog/StackView.gif)
 
+![LoginInterBackground](PicsForLog/LoginInterBackground.gif)
