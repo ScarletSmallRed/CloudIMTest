@@ -17,10 +17,22 @@ class RegistrationTableViewController: UITableViewController {
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(RegistrationTableViewController.doneButtonTap))
         
         self.navigationController?.isNavigationBarHidden = false
         title = "Registration"
+    }
+    
+    func doneButtonTap() {
+        
+        let alert = UIAlertController(title: "Alert", message: "You've tapped up on the Done Button", preferredStyle: .alert)
+        
+        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+        
+        alert.addAction(action)
+        
+        present(alert, animated: true, completion: nil)
+
     }
 
     override func didReceiveMemoryWarning() {
