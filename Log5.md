@@ -1,3 +1,5 @@
+[TOC]
+
 # 5 Design about Login Interface
 
 ## 5.1 Login UI effects While Starting
@@ -59,3 +61,34 @@ override func viewDidLoad() {
     }
 ```
 
+## 5.3 UITalbeView of Registration
+
+Implement Code
+
+* Emb `NavigationBar`.
+* Show segue from `Login View Controller` to `Registration Tabble View Controller`.
+* Hid `Navigation` in `Login View` and show it in `Registration TableView`.
+* Edit Registration Table View.
+
+
+```swift
+//In class `LoginViewController`
+override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.isNavigationBarHidden = true
+}
+```
+
+```swift
+//In class `RegistrationTableViewController`:
+override func viewDidLoad() {
+        super.viewDidLoad()
+
+        self.navigationController?.isNavigationBarHidden = false
+        title = "Registration"
+}
+```
+
+### Final Result
+
+![RegistrationTableView](PicsForLog/RegistrationTableView.gif)
