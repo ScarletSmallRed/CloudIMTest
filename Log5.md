@@ -63,7 +63,7 @@ override func viewDidLoad() {
 
 ## 5.3 UITalbeView of Registration
 
-Implement Code
+### Implement Code
 
 * Emb `NavigationBar`.
 * Show segue from `Login View Controller` to `Registration Tabble View Controller`.
@@ -92,3 +92,35 @@ override func viewDidLoad() {
 ### Final Result
 
 ![RegistrationTableView](PicsForLog/RegistrationTableView.gif)
+
+## 5.4 Object Constraints
+
+### Implement Points
+
+* Set the `Text Field` keyboard type.
+* Add new objects' constraints and alignment constraints.
+* Add `rightBarButtonItem` for `RegistrationTableView` without `navigation controller` embed in:
+
+```swift
+override func viewDidLoad() {
+        super.viewDidLoad()
+
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(RegistrationTableViewController.doneButtonTap))
+}
+
+func doneButtonTap() {
+        
+        let alert = UIAlertController(title: "Alert", message: "You've tapped up on the Done Button", preferredStyle: .alert)
+        
+        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+        
+        alert.addAction(action)
+        
+        present(alert, animated: true, completion: nil)
+
+}
+```
+
+### Result
+
+![屏幕快照 2016-12-09 下午4.21.40](PicsForLog/屏幕快照 2016-12-09 下午4.21.40.png)
