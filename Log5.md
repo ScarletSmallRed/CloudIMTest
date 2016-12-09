@@ -22,4 +22,40 @@ override func viewDidAppear(_ animated: Bool) {
 
 ![StackView](PicsForLog/StackView.gif)
 
+## 5.2 Background Wallpaper Scrolling effect
+
+### Overall Effect
+
 ![LoginInterBackground](PicsForLog/LoginInterBackground.gif)
+
+### The Code that Implements this Effect
+
+* Let class `LoginViewController` inherit from class `RCAnimatedImagesViewDelegate` and override its function `animatedImagesNumber` and `animatedImagesView`:
+
+```swift
+class LoginViewController: UIViewController, RCAnimatedImagesViewDelegate
+
+func animatedImagesNumber(ofImages animatedImagesView: RCAnimatedImagesView!) -> UInt {
+        return 3
+    }
+    
+func animatedImagesView(_ animatedImagesView: RCAnimatedImagesView!, imageAt index: UInt) -> UIImage! {
+        let imageNames = ["image1", "image2", "image3"]
+        let intIndex = Int(index)
+        return UIImage(named: imageNames[intIndex])
+    }
+```
+
+* set wallpaper’s delegate as `self` and then start this animation:
+
+```swift
+override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
+        
+        wallpaperImageView.delegate = self
+        wallpaperImageView.startAnimating()
+    }
+```
+
