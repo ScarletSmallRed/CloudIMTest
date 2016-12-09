@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		6D836C2E4AFE5538231F6CDE /* libPods-CloudIMTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D57C469C5370C72249ABE471 /* libPods-CloudIMTest.a */; };
 		CA40C4111DF250930027AD18 /* conversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA40C4101DF250930027AD18 /* conversationViewController.swift */; };
+		CA49ED311DFA55A50026ABB0 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA49ED2F1DFA55A50026ABB0 /* Login.storyboard */; };
+		CA49ED331DFA57920026ABB0 /* RegistrationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA49ED321DFA57920026ABB0 /* RegistrationTableViewController.swift */; };
 		CA7A1E431DF3F65E002145BE /* ConversationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7A1E421DF3F65E002145BE /* ConversationListViewController.swift */; };
 		CA7A1E461DF3FFBB002145BE /* Conversations.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA7A1E441DF3FFBB002145BE /* Conversations.storyboard */; };
 		CA7A1E481DF3FFCD002145BE /* Serve.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA7A1E471DF3FFCD002145BE /* Serve.storyboard */; };
@@ -30,6 +32,8 @@
 		62C186AD97C850BB5EDC3F6F /* Pods-CloudIMTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CloudIMTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-CloudIMTest/Pods-CloudIMTest.release.xcconfig"; sourceTree = "<group>"; };
 		CA3882F01DF517E9002A7797 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 		CA40C4101DF250930027AD18 /* conversationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = conversationViewController.swift; sourceTree = "<group>"; };
+		CA49ED301DFA55A50026ABB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
+		CA49ED321DFA57920026ABB0 /* RegistrationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationTableViewController.swift; sourceTree = "<group>"; };
 		CA7A1E421DF3F65E002145BE /* ConversationListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationListViewController.swift; sourceTree = "<group>"; };
 		CA7A1E451DF3FFBB002145BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Conversations.storyboard; sourceTree = "<group>"; };
 		CA7A1E471DF3FFCD002145BE /* Serve.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Serve.storyboard; sourceTree = "<group>"; };
@@ -89,10 +93,12 @@
 				CAAB15111DF99B800047F26C /* RCAnimatedImagesView.m */,
 				CABFA3CF1DF0155100AA0D4C /* AppDelegate.swift */,
 				CABFA3D31DF0155100AA0D4C /* Main.storyboard */,
+				CA49ED2F1DFA55A50026ABB0 /* Login.storyboard */,
 				CA7A1E4C1DF400DA002145BE /* About.storyboard */,
 				CA7A1E491DF400CD002145BE /* Contacts.storyboard */,
 				CA7A1E471DF3FFCD002145BE /* Serve.storyboard */,
 				CA7A1E441DF3FFBB002145BE /* Conversations.storyboard */,
+				CA49ED321DFA57920026ABB0 /* RegistrationTableViewController.swift */,
 				CAC00A761DF951F600E8D968 /* LoginViewController.swift */,
 				CA7A1E421DF3F65E002145BE /* ConversationListViewController.swift */,
 				CA40C4101DF250930027AD18 /* conversationViewController.swift */,
@@ -196,6 +202,7 @@
 				CAD1AF421DF0562100D08C44 /* Podfile in Resources */,
 				CA7A1E4B1DF400CD002145BE /* Contacts.storyboard in Resources */,
 				CABFA3D51DF0155100AA0D4C /* Main.storyboard in Resources */,
+				CA49ED311DFA55A50026ABB0 /* Login.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,6 +263,7 @@
 			files = (
 				CAC00A771DF951F600E8D968 /* LoginViewController.swift in Sources */,
 				CAED51DF1DF83DC300C53F8C /* RoundImageView.swift in Sources */,
+				CA49ED331DFA57920026ABB0 /* RegistrationTableViewController.swift in Sources */,
 				CABFA3D81DF0155100AA0D4C /* CloudIMTest.xcdatamodeld in Sources */,
 				CA7A1E431DF3F65E002145BE /* ConversationListViewController.swift in Sources */,
 				CA40C4111DF250930027AD18 /* conversationViewController.swift in Sources */,
@@ -267,6 +275,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		CA49ED2F1DFA55A50026ABB0 /* Login.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CA49ED301DFA55A50026ABB0 /* Base */,
+			);
+			name = Login.storyboard;
+			sourceTree = "<group>";
+		};
 		CA7A1E441DF3FFBB002145BE /* Conversations.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
