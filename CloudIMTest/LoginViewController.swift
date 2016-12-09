@@ -15,11 +15,11 @@ class LoginViewController: UIViewController, RCAnimatedImagesViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
         
         wallpaperImageView.delegate = self
         wallpaperImageView.startAnimating()
-
-        // Do any additional setup after loading the view.
     }
     
     func animatedImagesNumber(ofImages animatedImagesView: RCAnimatedImagesView!) -> UInt {
