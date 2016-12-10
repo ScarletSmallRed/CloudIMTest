@@ -9,6 +9,14 @@
 import UIKit
 
 class RegistrationTableViewController: UITableViewController {
+    @IBOutlet weak var textBoxName: UITextBox!
+    @IBOutlet weak var textBoxPassword: UITextBox!
+    @IBOutlet weak var textBoxMailbox: UITextBox!
+    @IBOutlet weak var textBoxRegion: UITextBox!
+    @IBOutlet weak var textBoxHintQues: UITextBox!
+    @IBOutlet weak var textBoxQuesAnswer: UITextBox!
+    
+    @IBOutlet var textBoxRequired: [UITextBox]!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,15 +33,26 @@ class RegistrationTableViewController: UITableViewController {
     
     func doneButtonTap() {
         
-        let alert = UIAlertController(title: "Alert", message: "You've tapped up on the Done Button", preferredStyle: .alert)
-        
-        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
-        
-        alert.addAction(action)
-        
-        present(alert, animated: true, completion: nil)
+        checkRequiredField()
 
     }
+    
+    func checkRequiredField() {
+        
+        for textField in textBoxRequired {
+            if textField.text!.isEmpty {
+                self.errorNotice(NSLocalizedString("Blank", comment: "Error notice for blank required fields."))
+                }
+            }
+        
+        let regex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"
+        let predicate = NSPredicate(format: "SELF MATCHES %@", regex)
+        guard predicate.evaluate(with: textBoxMailbox.text) else {
+            self.errorNotice(NSLocalizedString("Incorrect mail", comment: "Error notice for incorrect mailbox"))
+            return
+        }
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

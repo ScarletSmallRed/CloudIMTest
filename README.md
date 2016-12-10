@@ -29,5 +29,7 @@ More detail is  showed in the link below:
 * [RongCloudIMKit](https://github.com/huangjinlei/RongCloudIM)
 * [KxMenu](https://github.com/kolyvan/kxmenu)
 * [PopMenu](https://github.com/xhzengAIB/PopMenu)
+* [UITextBox](https://github.com/yagamis/UITextBox)
+* [SwiftNotice](https://github.com/johnlui/SwiftNotice)
 
 
