@@ -124,3 +124,35 @@ func doneButtonTap() {
 ### Result
 
 ![屏幕快照 2016-12-09 下午4.21.40](PicsForLog/屏幕快照 2016-12-09 下午4.21.40.png)
+
+## 5.5 Verification of the Input
+
+### Animation Text Box
+
+`UITextBox` allows placeholders to automatically jump to the right of the text box.
+
+![屏幕快照 2016-12-10 上午10.49.09](PicsForLog/屏幕快照 2016-12-10 上午10.49.09.png)![屏幕快照 2016-12-10 上午10.49.40](PicsForLog/屏幕快照 2016-12-10 上午10.49.40.png)
+
+### Code Implement and Results
+
+```swift
+func checkRequiredField() {
+        
+        for textField in textBoxRequired {
+            if textField.text!.isEmpty {
+                self.errorNotice(NSLocalizedString("Blank", comment: "Error notice for blank required fields."))
+            } else {
+                let regex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"
+                let predicate = NSPredicate(format: "SELF MATCHES %@", regex)
+                guard predicate.evaluate(with: textBoxMailbox.text) else {
+                    self.errorNotice(NSLocalizedString("Incorrect mail", comment: "Error notice for incorrect mailbox"))
+                    return
+                }
+            }
+        }
+```
+
+![屏幕快照 2016-12-10 上午10.55.26](PicsForLog/屏幕快照 2016-12-10 上午10.55.26.png)
+
+![屏幕快照 2016-12-10 上午10.55.55](../屏幕快照 2016-12-10 上午10.55.55.png)
+

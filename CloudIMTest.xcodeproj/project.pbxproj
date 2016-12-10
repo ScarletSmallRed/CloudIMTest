@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		6D836C2E4AFE5538231F6CDE /* libPods-CloudIMTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D57C469C5370C72249ABE471 /* libPods-CloudIMTest.a */; };
 		CA40C4111DF250930027AD18 /* conversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA40C4101DF250930027AD18 /* conversationViewController.swift */; };
+		CA47B03D1DFB9C27008C8197 /* SwiftNotice.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA47B03B1DFB9C27008C8197 /* SwiftNotice.swift */; };
+		CA47B03E1DFB9C27008C8197 /* UITextBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA47B03C1DFB9C27008C8197 /* UITextBox.swift */; };
 		CA49ED311DFA55A50026ABB0 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA49ED2F1DFA55A50026ABB0 /* Login.storyboard */; };
 		CA49ED331DFA57920026ABB0 /* RegistrationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA49ED321DFA57920026ABB0 /* RegistrationTableViewController.swift */; };
 		CA7A1E431DF3F65E002145BE /* ConversationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7A1E421DF3F65E002145BE /* ConversationListViewController.swift */; };
@@ -32,6 +34,8 @@
 		62C186AD97C850BB5EDC3F6F /* Pods-CloudIMTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CloudIMTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-CloudIMTest/Pods-CloudIMTest.release.xcconfig"; sourceTree = "<group>"; };
 		CA3882F01DF517E9002A7797 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 		CA40C4101DF250930027AD18 /* conversationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = conversationViewController.swift; sourceTree = "<group>"; };
+		CA47B03B1DFB9C27008C8197 /* SwiftNotice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftNotice.swift; sourceTree = "<group>"; };
+		CA47B03C1DFB9C27008C8197 /* UITextBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextBox.swift; sourceTree = "<group>"; };
 		CA49ED301DFA55A50026ABB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
 		CA49ED321DFA57920026ABB0 /* RegistrationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationTableViewController.swift; sourceTree = "<group>"; };
 		CA7A1E421DF3F65E002145BE /* ConversationListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationListViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +71,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CA47B03A1DFB9B9B008C8197 /* 3rd party */ = {
+			isa = PBXGroup;
+			children = (
+				CA47B03B1DFB9C27008C8197 /* SwiftNotice.swift */,
+				CA47B03C1DFB9C27008C8197 /* UITextBox.swift */,
+				CAAB15101DF99B800047F26C /* RCAnimatedImagesView.h */,
+				CAAB15111DF99B800047F26C /* RCAnimatedImagesView.m */,
+			);
+			name = "3rd party";
+			sourceTree = "<group>";
+		};
 		CABFA3C31DF0155100AA0D4C = {
 			isa = PBXGroup;
 			children = (
@@ -89,8 +104,7 @@
 		CABFA3CE1DF0155100AA0D4C /* CloudIMTest */ = {
 			isa = PBXGroup;
 			children = (
-				CAAB15101DF99B800047F26C /* RCAnimatedImagesView.h */,
-				CAAB15111DF99B800047F26C /* RCAnimatedImagesView.m */,
+				CA47B03A1DFB9B9B008C8197 /* 3rd party */,
 				CABFA3CF1DF0155100AA0D4C /* AppDelegate.swift */,
 				CABFA3D31DF0155100AA0D4C /* Main.storyboard */,
 				CA49ED2F1DFA55A50026ABB0 /* Login.storyboard */,
@@ -261,12 +275,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA47B03E1DFB9C27008C8197 /* UITextBox.swift in Sources */,
 				CAC00A771DF951F600E8D968 /* LoginViewController.swift in Sources */,
 				CAED51DF1DF83DC300C53F8C /* RoundImageView.swift in Sources */,
 				CA49ED331DFA57920026ABB0 /* RegistrationTableViewController.swift in Sources */,
 				CABFA3D81DF0155100AA0D4C /* CloudIMTest.xcdatamodeld in Sources */,
 				CA7A1E431DF3F65E002145BE /* ConversationListViewController.swift in Sources */,
 				CA40C4111DF250930027AD18 /* conversationViewController.swift in Sources */,
+				CA47B03D1DFB9C27008C8197 /* SwiftNotice.swift in Sources */,
 				CAAB15121DF99B800047F26C /* RCAnimatedImagesView.m in Sources */,
 				CABFA3D01DF0155100AA0D4C /* AppDelegate.swift in Sources */,
 			);
