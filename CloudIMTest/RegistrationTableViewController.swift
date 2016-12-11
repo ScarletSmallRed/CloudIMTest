@@ -46,7 +46,6 @@ class RegistrationTableViewController: UITableViewController {
         
         
         
-        
         let validatorUser = AJWValidator(type: .string)
         validatorUser?.addValidation(toEnsureMinimumLength: 3, invalidMessage: NSLocalizedString("at least 3 characters", comment: "UserName mini validator"))
         validatorUser?.addValidation(toEnsureMaximumLength: 15, invalidMessage: NSLocalizedString("to 15 characters", comment: "UserName max validator"))
