@@ -17,6 +17,10 @@ class RegistrationTableViewController: UITableViewController {
     @IBOutlet weak var textBoxQuesAnswer: UITextBox!
     
     @IBOutlet var textBoxRequired: [UITextBox]!
+    
+    var doneButton: UIBarButtonItem?
+    
+    var possibleInputs: Inputs = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,9 +30,94 @@ class RegistrationTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(RegistrationTableViewController.doneButtonTap))
+        doneButton = self.navigationItem.rightBarButtonItem
+        doneButton?.isEnabled = false
         
         self.navigationController?.isNavigationBarHidden = false
         title = "Registration"
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        let validatorUser = AJWValidator(type: .string)
+        validatorUser?.addValidation(toEnsureMinimumLength: 3, invalidMessage: NSLocalizedString("at least 3 characters", comment: "UserName mini validator"))
+        validatorUser?.addValidation(toEnsureMaximumLength: 15, invalidMessage: NSLocalizedString("to 15 characters", comment: "UserName max validator"))
+        textBoxName.ajw_attach(validatorUser)
+        
+        validatorUser?.validatorStateChangedHandler = {
+            (newState) in
+            
+            switch newState {
+            case .validationStateValid:
+                self.textBoxName.highlightState = .default
+                self.possibleInputs.formUnion(.user)
+            default:
+                let errorMessage = validatorUser?.errorMessages.first as? String
+                self.textBoxName.highlightState = UITextBoxHighlightState.wrong(errorMessage!)
+                
+                self.possibleInputs.subtract(.user)
+            }
+            
+            self.doneButton?.isEnabled = self.possibleInputs.boolValue
+            print(self.possibleInputs.rawValue)
+        }
+        
+        
+        
+        
+        let validatorPass = AJWValidator(type: .string)
+        validatorPass?.addValidation(toEnsureMinimumLength: 3, invalidMessage: NSLocalizedString("at least 3 characters", comment: "Password mini validator"))
+        validatorPass?.addValidation(toEnsureMaximumLength: 15, invalidMessage: NSLocalizedString("up to 15 characters", comment: "Password max validator"))
+        textBoxPassword.ajw_attach(validatorPass)
+        
+        validatorPass?.validatorStateChangedHandler = {
+            (newState) in
+            
+            switch newState {
+            case .validationStateValid:
+                self.textBoxPassword.highlightState = .default
+                self.possibleInputs.formUnion(.pass)
+            default:
+                let errorMessage = validatorPass?.errorMessages.first as? String
+                self.textBoxPassword.highlightState = UITextBoxHighlightState.wrong(errorMessage!)
+                self.possibleInputs.subtract(.pass)
+            }
+            
+            self.doneButton?.isEnabled = self.possibleInputs.boolValue
+            print(self.possibleInputs.rawValue)
+        }
+        
+        
+        
+        let validatorMail = AJWValidator(type: .string)
+        validatorMail?.addValidationToEnsureValidEmail(withInvalidMessage: "Incorrect mail")
+        self.textBoxMailbox.ajw_attach(validatorMail)
+        
+        validatorMail?.validatorStateChangedHandler = {
+            (newState) in
+            
+            switch newState {
+            case .validationStateValid:
+                self.textBoxMailbox.highlightState = .default
+                self.possibleInputs.formUnion(.mail)
+            default:
+                let errorMessage = validatorMail?.errorMessages.first as? String
+                self.textBoxMailbox.highlightState = UITextBoxHighlightState.wrong(errorMessage!)
+                self.possibleInputs.subtract(.mail)
+            }
+            
+            self.doneButton?.isEnabled = self.possibleInputs.boolValue
+            print(self.possibleInputs.rawValue)
+        }
+        
     }
     
     func doneButtonTap() {
