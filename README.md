@@ -19,6 +19,7 @@ More detail is  showed in the link below:
 * [Log2(Bridge and CocoaPods Configuration)](Log2.md)
 * [Log3(Chat and Conversation, CocoaPods and Storyboard)](Log3.md)
 * [Log4(Third Party Libraries)](Log4.md)
+* [Log5(Design about Login Interface)](Log5.md)
 
 
 ## Third-Paryt Libraries
@@ -28,4 +29,7 @@ More detail is  showed in the link below:
 * [RongCloudIMKit](https://github.com/huangjinlei/RongCloudIM)
 * [KxMenu](https://github.com/kolyvan/kxmenu)
 * [PopMenu](https://github.com/xhzengAIB/PopMenu)
+* [UITextBox](https://github.com/yagamis/UITextBox)
+* [SwiftNotice](https://github.com/johnlui/SwiftNotice)
+
 
