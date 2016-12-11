@@ -26,6 +26,7 @@
 		CABFA3DD1DF0155100AA0D4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CABFA3DB1DF0155100AA0D4C /* LaunchScreen.storyboard */; };
 		CAC00A771DF951F600E8D968 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC00A761DF951F600E8D968 /* LoginViewController.swift */; };
 		CAD1AF421DF0562100D08C44 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = CAD1AF411DF0562100D08C44 /* Podfile */; };
+		CAD6C5171DFD38C600C4DE1E /* Inputs.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD6C5161DFD38C600C4DE1E /* Inputs.swift */; };
 		CAED51DF1DF83DC300C53F8C /* RoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAED51DE1DF83DC300C53F8C /* RoundImageView.swift */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +56,7 @@
 		CABFA3DE1DF0155100AA0D4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CAC00A761DF951F600E8D968 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CAD1AF411DF0562100D08C44 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		CAD6C5161DFD38C600C4DE1E /* Inputs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Inputs.swift; sourceTree = "<group>"; };
 		CAED51DE1DF83DC300C53F8C /* RoundImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundImageView.swift; sourceTree = "<group>"; };
 		D57C469C5370C72249ABE471 /* libPods-CloudIMTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CloudIMTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -117,6 +119,7 @@
 				CA7A1E421DF3F65E002145BE /* ConversationListViewController.swift */,
 				CA40C4101DF250930027AD18 /* conversationViewController.swift */,
 				CAED51DE1DF83DC300C53F8C /* RoundImageView.swift */,
+				CAD6C5161DFD38C600C4DE1E /* Inputs.swift */,
 				CABFA3D91DF0155100AA0D4C /* Assets.xcassets */,
 				CABFA3DB1DF0155100AA0D4C /* LaunchScreen.storyboard */,
 				CABFA3DE1DF0155100AA0D4C /* Info.plist */,
@@ -284,6 +287,7 @@
 				CA40C4111DF250930027AD18 /* conversationViewController.swift in Sources */,
 				CA47B03D1DFB9C27008C8197 /* SwiftNotice.swift in Sources */,
 				CAAB15121DF99B800047F26C /* RCAnimatedImagesView.m in Sources */,
+				CAD6C5171DFD38C600C4DE1E /* Inputs.swift in Sources */,
 				CABFA3D01DF0155100AA0D4C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

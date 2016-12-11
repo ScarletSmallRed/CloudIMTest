@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>AJWValidator.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>KxMenu.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,32 +37,32 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>0636830D3FBFEF2F7B17D1EF0CE23781</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2DF6556DE5E4C9A2E94BDA894AF335A1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4D73A8E30F181090A134A4123CA29AD7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>755345325818102A8B1DDDD378EC9676</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>75DBB6EF6717B2F157ABB6A01FAB4351</key>
+		<key>C46E41C899A413C24B8161246E75A47C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9EAC7F322D58D34A89B706A7DB5B0103</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>DC88B29E6044E1D5B2B74D44E041D2A7</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>ED95F28C6DC9651E0626AAFF86F8023D</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>FD0A9D416682DE83B3D6262D5BF51394</key>
+		<key>CD2A6AFFC74533B21107A7C163996BB5</key>
 		<dict>
 			<key>primary</key>
 			<true/>

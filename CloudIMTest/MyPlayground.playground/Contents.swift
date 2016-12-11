@@ -4,22 +4,29 @@ import UIKit
 
 var str = "Hello, playground"
 
-
-class ClassA {
-    // takes a closure (non-escaping by default)
-    func someMethod(closure: @escaping () -> Void) {
-        // secret stuff
-    }
-}
-
-class ClassB {
-    let classA = ClassA()
-    var someProperty = "Hello"
+struct Inputs: OptionSet {
+    let rawValue: Int
     
-    func testClosure() {
-        classA.someMethod {
-            // self is captured!
-            self.someProperty = "Inside the closure!"
-        }
-    }
+    static let user = Inputs(rawValue: 1)  //1
+    static let pass = Inputs(rawValue: 1 << 1) //10
+    static let mail = Inputs(rawValue: 1 << 2) //100
+    
 }
+
+extension Inputs {
+    
+    var boolValue: Bool {
+        return self.rawValue == 0b111
+    }
+    
+}
+
+var testSet: Inputs = [.pass, .mail, .user]
+testSet.rawValue
+testSet.boolValue
+testSet.subtract(.pass)
+testSet.boolValue
+testSet.rawValue
+testSet.formUnion(.pass)
+testSet.boolValue
+testSet.rawValue
