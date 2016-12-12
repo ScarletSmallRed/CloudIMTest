@@ -65,6 +65,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, RCIMUserInfoDataSource {
         
         RCIM.shared().userInfoDataSource = self
         
+//        QqpbTXbQLfT2S4zGRkJqqQXo-gzGzoHsz
+//        7SxKGgeHFV0dIuEsCTgRwOO8
+        AVOSCloud.setApplicationId("QqpbTXbQLfT2S4zGRkJqqQXo-gzGzoHsz", clientKey: "7SxKGgeHFV0dIuEsCTgRwOO8")
         
         return true
     }

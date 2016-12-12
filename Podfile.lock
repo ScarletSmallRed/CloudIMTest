@@ -1,5 +1,6 @@
 PODS:
   - AJWValidator (0.0.8)
+  - AVOSCloud (3.7.1)
   - KxMenu (1)
   - pop (1.0.9)
   - PopMenu (2.4):
@@ -10,18 +11,20 @@ PODS:
 
 DEPENDENCIES:
   - AJWValidator (~> 0.0.8)
+  - AVOSCloud (~> 3.7.1)
   - KxMenu (~> 1)
   - PopMenu (~> 2.4)
   - RongCloudIMKit
 
 SPEC CHECKSUMS:
   AJWValidator: ed00557b9cdcc38a8216aa9ddbd76b4eadb73615
+  AVOSCloud: 0ef0e068cbbe871c79257a501555c3e67fe8d866
   KxMenu: c025365712f55fa99feb7830fbb7dea0e912be72
   pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
   PopMenu: 26b97baeaf250070f4f61b93727ca86d127d7bc5
   RongCloudIMKit: 0b93700b17d224c7c213815b8a23a9c356fe20e2
   XHRealTimeBlur: 661fadd5691ba2d349758e8fd5fbdb499ac55f8c
 
-PODFILE CHECKSUM: 7940e9c399a44c47e205d78a999c81bda7c4b909
+PODFILE CHECKSUM: 381a076fd43ea753d2b0816646fcbc656afe9a3a
 
 COCOAPODS: 1.1.1
