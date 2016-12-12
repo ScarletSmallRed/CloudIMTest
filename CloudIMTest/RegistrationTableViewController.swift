@@ -121,8 +121,43 @@ class RegistrationTableViewController: UITableViewController {
     
     func doneButtonTap() {
         
-        checkRequiredField()
-
+        
+        self.pleaseWait()
+        
+        let user = AVObject(className: "CloudIMUser")
+        
+        user["userName"] = self.textBoxName.text
+        user["pass"] = self.textBoxPassword.text
+        user["mail"] = self.textBoxMailbox.text
+        user["region"] = self.textBoxRegion.text
+        user["question"] = self.textBoxHintQues.text
+        user["answer"] = self.textBoxQuesAnswer.text
+        
+        let query = AVQuery(className: "CloudIMUser")
+        query.whereKey("userName", contains: self.textBoxName.text!)
+        
+        query.getFirstObjectInBackground { (object, error) in
+            self.clearAllNotice()
+            print("!!!!!!!!!!!!!!!!!!!!")
+            
+            if object != nil {
+                self.errorNotice(NSLocalizedString("User registered", comment: "User registered error notice"))
+                self.textBoxName.becomeFirstResponder()
+                self.doneButton?.isEnabled = false
+            } else {
+                
+                user.saveInBackground({ (succeed, error) in
+                    if succeed {
+                        self.successNotice(NSLocalizedString("Register succeeds", comment: "User successful registration notice"))
+                        self.navigationController?.popViewController(animated: true)
+                    } else {
+                        print(error!)
+                    }
+                })
+            }
+        }
+        
+        
     }
     
     func checkRequiredField() {
