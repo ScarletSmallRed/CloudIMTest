@@ -7,3 +7,4 @@
 #import <PopMenu/PopMenu.h>
 #import "RCAnimatedImagesView.h"
 #import <AJWValidator/AJWValidator.h>
+#import <AVOSCloud/AVOSCloud.h>
